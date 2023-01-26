@@ -1,34 +1,22 @@
-Usage
-=====
-
-.. _installation:
-
 Installation
-------------
+======================
 
-To use Lumache, first install it using pip:
+Development Environment
+------------------------
+You are free to use any development environment you like.
+This project was written with PyCharm. The advantage of PyCharm is that it has been developed especially for Python.
+
+
+GitHub
+------------------------
+The project is uploaded to Github. The first is to Sign in or to create an account on GitHub.
+When you are logged in you need to download this reposority.
 
 .. code-block:: console
 
-   (.venv) $ pip install lumache
+   https://github.com/Nordwindfeld/Novaland.git
 
-Creating recipes
-----------------
-
-To retrieve a list of random ingredients,
-you can use the ``lumache.get_random_ingredients()`` function:
-
-.. autofunction:: lumache.get_random_ingredients
-
-The ``kind`` parameter should be either ``"meat"``, ``"fish"``,
-or ``"veggies"``. Otherwise, :py:func:`lumache.get_random_ingredients`
-will raise an exception.
-
-.. autoexception:: lumache.InvalidKindError
-
-For example:
-
->>> import lumache
->>> lumache.get_random_ingredients()
-['shells', 'gorgonzola', 'parsley']
+oTree
+------------------------
+Novaland is a project based on 'oTree'. oTree is a plattform for behavioral research and experiments.
 
