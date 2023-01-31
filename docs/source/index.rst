@@ -12,5 +12,5 @@ This was created by the University of Duisburg.
 Contents
 -----------------------------------------
 .. toctree::
-   usage
-   api
+   installation
+   create a new page
