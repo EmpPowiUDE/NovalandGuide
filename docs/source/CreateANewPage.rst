@@ -130,4 +130,14 @@ For the visual representation of the button and for the integration of the funct
 
 .. code-block:: groundStrcutureButton
     <button Button Properties> Button Text </button>
+..
+
+The style of the button
+--------------------------
+The stylesheet is used for the visual representation.
+This can be retrieved with the 'class' attribute.
+
+.. code-block:: styleOfTheButton
+    <button class='button'> Button Text </button>
+..
 
