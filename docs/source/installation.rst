@@ -10,9 +10,9 @@ Download Pycharm:
 
 .. code-block:: console
 
-  Download `PyCharm`_
+    `Download Pycharm <SO>`_.
 
-.. _PyCharm: https://www.jetbrains.com/de-de/pycharm/download/
+.. _SO: https://www.jetbrains.com/de-de/pycharm/download
 
 GitHub
 ------------------------
