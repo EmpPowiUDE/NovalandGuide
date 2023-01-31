@@ -9,6 +9,8 @@ To work on a new page in Novaland you have to create first a new page in an exis
 To do this click the right mouse button on the app or one of the phases we have already defined, click on "New" and then on "HTML File".
 
 .. code-block:: console
+    :linenos:
+
     [click the right mouse button on the app / phase] -> [New] -> [HTML File]
 
 Structure of the page
@@ -25,6 +27,8 @@ A Django code always follows this structure {% code %}.
 Therefore we need a block start and a block end and they are written like this:
 
 .. code-block:: console
+    :linenos:
+
     {% block title %}
     ...
     {% endblock %}
@@ -36,18 +40,24 @@ In order for the newly created page to adapt to the style of the already existin
 Therefore, in the first step you need to access the Statics folder via Django.
 
 .. code-block:: console
+    :linenos:
+
     {% load staticfiles %}
 
 
 In the second step, you link the stylesheet to your project using HTML.
 
 .. code-block:: console
+    :linenos:
+
     <link href="{% static 'NovalandStyle.css' %}" rel="stylesheet">
 
 
 Here is a template to apply to their HTML site:
 
 .. code-block:: console
+    :linenos:
+
     {% block style %}
     {% load staticfiles %}
     <link href="{% static 'NovalandStyle.css' %}" rel="stylesheet">
@@ -65,6 +75,8 @@ To convert the text you wrote to a title, you need to write it between the 'h1' 
 Example:
 
 .. code-block:: console
+    :linenos:
+
     <h1 class="h1"> Title Text </h1>
 
 Content
@@ -96,6 +108,8 @@ With the help of JavaScript, various functions can be integrated on the page.
 The JavaScript code is written between a 'script' element.
 
 .. code-block:: console
+    :linenos:
+
     <script> javascript code </script>
 
 
@@ -109,6 +123,8 @@ If you want to give the participants the possibility to call the next page, you 
 This allows you to have all the built-in form fields filled out by the participants before they can call the next page.
 
 .. code-block:: console
+    :linenos:
+
     {% next button %}
 
 Costumized Button
@@ -125,6 +141,8 @@ The ground structure
 For the visual representation of the button and for the integration of the functions, the button is written inside the 'Button' tag, which enables certain functions.
 
 .. code-block:: console
+    :linenos:
+
     <button Button Properties> Button Text </button>
 
 
@@ -134,4 +152,6 @@ The stylesheet is used for the visual representation.
 This can be retrieved with the 'class' attribute.
 
 .. code-block:: console
+    :linenos:
+
     <button class='button'> Button Text </button>
