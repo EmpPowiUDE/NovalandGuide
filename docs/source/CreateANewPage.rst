@@ -8,9 +8,8 @@ Creating a HTML file
 To work on a new page in Novaland you have to create first a new page in an existing app.
 To do this click the right mouse button on the app or one of the phases we have already defined, click on "New" and then on "HTML File".
 
-.. code-block:: createanepage
+.. code-block:: console
     [click the right mouse button on the app / phase] -> [New] -> [HTML File]
-..
 
 Structure of the page
 ====================
@@ -25,11 +24,10 @@ For Novaland we basically need the functions to create a "block" in which we can
 A Django code always follows this structure {% code %}.
 Therefore we need a block start and a block end and they are written like this:
 
-.. code-block:: django
+.. code-block:: console
     {% block title %}
     ...
     {% endblock %}
-..
 
 The visual representation of the page
 =====================
@@ -37,24 +35,23 @@ Visual representation of the page:
 In order for the newly created page to adapt to the style of the already existing pages, you must link the already prescribed 'stylesheet'. This is based on a CSS written code, which is integrated in the project under the "_static" folder.
 Therefore, in the first step you need to access the Statics folder via Django.
 
-.. code-block:: loadstaticfiels
+.. code-block:: console
     {% load staticfiles %}
-..
+
 
 In the second step, you link the stylesheet to your project using HTML.
 
-.. code-block:: loadstaticfiels
+.. code-block:: console
     <link href="{% static 'NovalandStyle.css' %}" rel="stylesheet">
-..
+
 
 Here is a template to apply to their HTML site:
 
-.. code-block:: loadstaticfiels
+.. code-block:: console
     {% block style %}
     {% load staticfiles %}
     <link href="{% static 'NovalandStyle.css' %}" rel="stylesheet">
     {% endblock %}
-..
 
 Add text
 =====================
@@ -67,18 +64,18 @@ To convert the text you wrote to a title, you need to write it between the 'h1' 
 
 Example:
 
-.. code-block:: h1
+.. code-block:: console
     <h1 class="h1"> Title Text </h1>
-..
 
 Content
 ----------------------
 The content text is written in a different block than the title.
 This is written between a 'p' element, i.e. a paragraph or text paragraph element.
 
-.. code-block:: contentText
+.. code-block:: console
+    :linenos:
+
     <p class="p"> Content Text </p>
-..
 
 Basic HTML elements for working with text
 -----------------------------------------
@@ -98,9 +95,9 @@ Add functions
 With the help of JavaScript, various functions can be integrated on the page.
 The JavaScript code is written between a 'script' element.
 
-.. code-block:: javaScript
+.. code-block:: console
     <script> javascript code </script>
-..
+
 
 Buttons
 ===================
@@ -111,9 +108,8 @@ Standard oTree Button
 If you want to give the participants the possibility to call the next page, you can use oTree's own Django button.
 This allows you to have all the built-in form fields filled out by the participants before they can call the next page.
 
-.. code-block:: djangoButton
+.. code-block:: console
     {% next button %}
-..
 
 Costumized Button
 =====================
@@ -128,16 +124,14 @@ The ground structure
 ------------------------
 For the visual representation of the button and for the integration of the functions, the button is written inside the 'Button' tag, which enables certain functions.
 
-.. code-block:: groundStrcutureButton
+.. code-block:: console
     <button Button Properties> Button Text </button>
-..
+
 
 The style of the button
 --------------------------
 The stylesheet is used for the visual representation.
 This can be retrieved with the 'class' attribute.
 
-.. code-block:: styleOfTheButton
+.. code-block:: console
     <button class='button'> Button Text </button>
-..
-
