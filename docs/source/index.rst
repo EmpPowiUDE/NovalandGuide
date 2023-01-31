@@ -13,4 +13,4 @@ Contents
 -----------------------------------------
 .. toctree::
    installation
-   create a new page
+   CreateANewPage
