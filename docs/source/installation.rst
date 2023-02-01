@@ -4,8 +4,8 @@ Installation
 
 Development Environment
 =======================
-You are free to use any development environment you like.
-The following description is written mainly for the development environment 'PyCharm'.
+Feel free to use any preferred development environment.
+The following guide is primarily crafted for use with the 'PyCharm' development platform.
 
 Download PyCharm
 ------------------------
@@ -21,10 +21,13 @@ Download Pycharm:
 
 oTree
 ========================
-Novaland is a project based on 'oTree'. oTree is a plattform for behavioral research and experiments.
+Novaland is a project build on the 'oTree' plattform.
+oTree is a platform for conducting behavioral research and experiments.
 
 Install oTree
 -----------------------
+To install oTree in PyCharm, follow these steps:
+
 1. Open the 'Terminal' window in PyCharm
 
 2. Type:
@@ -33,7 +36,9 @@ Install oTree
 
     pip install otree
 
-3. Press enter and you will see that PyCharms install oTree.
+in the terminal and press enter
+
+3. The installation process of oTree in PyCharm will now begin
 
 
 GitHub
@@ -69,8 +74,3 @@ Install Django
 6. Press the 'Enable Django Support' button or check if the button is already enabled
 
 7. Under 'Django project root' select the project on your computer
-
-
-
-
-
