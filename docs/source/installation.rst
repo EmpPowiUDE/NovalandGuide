@@ -28,17 +28,17 @@ Install oTree
 -----------------------
 To install oTree in PyCharm, follow these steps:
 
-1. Open the 'Terminal' window in PyCharm
+    1. Open the 'Terminal' window in PyCharm
 
-2. Type:
+    2. Type:
 
-.. code-block:: console
+    .. code-block:: console
 
-    pip install otree
+        pip install otree
 
-in the terminal and press enter
+    in the terminal and press enter
 
-3. The installation process of oTree in PyCharm will now begin
+    3. The installation process of oTree in PyCharm will now begin
 
 
 GitHub
@@ -61,16 +61,16 @@ Save this folder to your computer and then open it in PyCharm.
 
 Install Django
 ----------------------
-1. Open PyCharm
+    1. Open PyCharm
 
-2. Click on 'file' in the menu
+    2. Click on 'file' in the menu
 
-3. Choose 'Settings'
+    3. Choose 'Settings'
 
-4. Go to 'Languages & Frameworks'
+    4. Go to 'Languages & Frameworks'
 
-5. Choose Django
+    5. Choose Django
 
-6. Press the 'Enable Django Support' button or check if the button is already enabled
+    6. Press the 'Enable Django Support' button or check if the button is already enabled
 
-7. Under 'Django project root' select the project on your computer
+    7. Under 'Django project root' select the project on your computer

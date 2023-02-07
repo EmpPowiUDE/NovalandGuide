@@ -14,3 +14,6 @@ Contents
 .. toctree::
    installation
    CreateANewPage
+   DataCollection
+   Heroku
+
