@@ -76,3 +76,10 @@ You can download this list of variables and functions as a .CSV file for further
     3. click on the "Backups" section
     4. then, click on the "Download" button to download the latest backup as a .CSV file
 
+
+Reset the Database:
+____________________________
+
+Papertrail:
+==========================
+

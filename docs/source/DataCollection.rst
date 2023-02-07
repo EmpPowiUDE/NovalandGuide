@@ -58,5 +58,14 @@ To get an overview of the functions of Heroku, you can open the chapter 'Heroku'
     3. The first site that you can see is a overview about your projects.
     4. Select your Novaland Project.
 
-Sessions Settings:
+Create a new session
 ________________________
+Different sessions can be created via the Session window.
+These sessions are separated from each other.
+Various settings can be made, such as the number of participants.
+After making all settings.
+
+Individual settings for the session:
+________________________________
+To be able to make individual settings, these must already be defined in the Settings.py file in PyCharm.
+

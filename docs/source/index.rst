@@ -14,6 +14,7 @@ Contents
 .. toctree::
    installation
    CreateANewPage
+   otreeProject
    DataCollection
    Heroku
 
