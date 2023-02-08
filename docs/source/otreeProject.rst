@@ -2,11 +2,52 @@
 oTree Project
 ======================
 
+An oTree project consists of several components, including:
+
+    **The settings.py file**
+
+    This file contains various configuration settings for the oTree project, including the PARTICIPANT_FIELDS and SESSION_CONFIGS.
+
+    **Applications**
+
+    Applications are the individual components of an oTree project that define the different parts of the experiment. Each application has its own set of models, views, and templates.
+
+    **Models**
+
+    Models are Python classes that define the data structure for the application and store the data in a database.
+
+    **Views**
+
+    Views define the logic for how data is displayed and processed in the application.
+
+    **Templates**
+
+    Templates define the HTML files used to render the pages of the application.
+
+    **Static files**
+
+    These are any additional files required for the application, such as images, JavaScript files, and CSS stylesheets.
+
+    **Participants**
+
+    Participants are the individuals who participate in the experiment. The information about each participant is stored in the database, and can be accessed and used throughout the project.
+
+    **Sessions**
+
+    A session is a single instance of an oTree experiment. Participants are grouped into sessions, and each session has its own set of parameters, such as the number of participants and the timing of events.
+
 Apps
 ====================
+An oTree app is a component of an oTree project, and represents a single task or game that participants can complete in the experiment.
+An oTree app typically consists of a series of pages, each of which presents a task or question for the participant to answer, as well as models and views that define the behavior and logic of the app.
+The app may also include custom templates and CSS styles to control the appearance of the pages and elements, as well as custom JavaScript code to handle user interactions and events.
+The structure and behavior of an oTree app is defined using the Python programming language, and the platform provides a set of tools and libraries to make it easy to create and manage the components of the app.
+
 
 __init__.py
-__________________________________
+==============================
+
+
 
 
 Settingy.py file
@@ -94,30 +135,30 @@ This data is stored there and therefore can be replayed in other apps.
 
 Create participant value
 
- Settings.py:
+    Settings.py:
 
-.. code-block:: console
+    .. code-block:: console
 
-    PARTICIPANT_FIELDS = ['ValueName1', 'ValueName2', ...]
+        PARTICIPANT_FIELDS = ['ValueName1', 'ValueName2', ...]
 
 
 Save value in the participant variable:
 
- __init__.py file in app:
+    __init__.py file in app:
 
-.. code-block:: console
+    .. code-block:: console
 
-    player.participant.ValueName1 = Value_1
-    player.participant.ValueName2 = Value_2
+        player.participant.ValueName1 = Value_1
+        player.participant.ValueName2 = Value_2
 
 Use saved values:
 
- __init__.py file in app:
+    __init__.py file in app:
 
-.. code-block:: console
+    .. code-block:: console
 
-    New_Value_1 = player.participant.ValueName1
-    New_Value_2 = player.participant.ValueName2
+        New_Value_1 = player.participant.ValueName1
+        New_Value_2 = player.participant.ValueName2
 
 
 
@@ -134,10 +175,31 @@ This field was used in Novaland mainly to get information from all participants 
 
 Example:
 
- Create an Settings Field.
-settings.py file:
+Create an Settings Field:
 
-SESSION_FIELDS = ['PARTEI', 'SPENDE', 'BRANDBETROFFENE']
+**settings.py file:**
+
+.. code-block:: console
+
+    SESSION_FIELDS = ['Variable_1', 'Variable_2', ...]
+
+Save a value in a session field:
+
+**__init__.py**
+
+.. code-block:: console
+
+    player.session.Variable_1 = Value_1
+    player.session.Variable_2 = Value_2
+
+Use a saved session value:
+
+**__init__.py**
+
+.. code-block:: console
+
+    New_Value_1 = player.session.ValueName1
+    New_Value_2 = player.session.ValueName2
 
 
 LANGUAGE_CODE
@@ -149,19 +211,41 @@ This is a string value that sets the language used in your experiment.
 
     LANGUAGE_CODE = 'de'
 
-ADMIN_USERNAME = 'admin'
+ADMIN_USERNAME
+____________________
+The ADMIN_USERNAME in the settings.py file in an oTree project refers to the username used by the administrator of the platform.
+This username is used to log in to the oTree administration interface, which provides access to various tools and features for managing the platform, such as monitoring participant progress, viewing data, and controlling the flow of the experiment.
+The ADMIN_USERNAME setting allows you to specify the username that will be used by the platform administrator.
+
+
+Example:
+
+.. code-block:: console
+
+    ADMIN_USERNAME = 'admin'
+
 
 ADMIN_PASSWORD = environ.get('OTREE_ADMIN_PASSWORD')
 
 SECRET_KEY = '6079585529411'
 
-DEBUG = False
-
-use_browser_bots = False
-
-Add Pictures
-========================
+DEBUG
+_____________________________
+Debug is a Boolean value that controls whether oTree should run in debug mode or not.
+In debug mode, detailed error messages are displayed and the performance is slower.
 
 
-Waiting Pages
+Example:
+
+..code-block:: console
+
+    DEBUG = False
+
+
+Static
+=========================
+A directory that contains any static assets such as images, fonts, or other files that are needed by the app.
+
+Template
 ===========================
+A directory that contains the HTML templates for the pages in the app, as well as any custom CSS and JavaScript files used by the templates.
