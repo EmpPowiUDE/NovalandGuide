@@ -47,6 +47,17 @@ The structure and behavior of an oTree app is defined using the Python programmi
 __init__.py
 ==============================
 
+BaseConstants
+
+Subsession
+
+Group
+
+Player
+    models
+        FloatField
+        StringField
+            widgets - Radioselect
 
 
 
@@ -237,7 +248,7 @@ In debug mode, detailed error messages are displayed and the performance is slow
 
 Example:
 
-..code-block:: console
+.. code-block:: console
 
     DEBUG = False
 

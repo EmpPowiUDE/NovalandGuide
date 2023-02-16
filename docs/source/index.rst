@@ -23,6 +23,7 @@ Contents
    installation
    otreeProject
    CreateANewPage
+   Buttons
    WaitPages
    AddPictures
    DataCollection
