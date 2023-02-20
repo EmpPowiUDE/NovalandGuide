@@ -70,11 +70,8 @@ After making all settings.
 Individual settings for the session:
 ________________________________
 To be able to make individual settings, these must already be defined in the Settings.py file in PyCharm.
+    --
 
-
-
-Die Eingabe von den teilnehmendne Personen speichern und nutzen
-_________________________________________________________________
 
 
 
