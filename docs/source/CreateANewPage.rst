@@ -2,7 +2,6 @@
 Create a new page
 ======================
 
-
 Creating a HTML file
 =====================
 To work on a new page in Novaland you have to create first a new page in an existing app.

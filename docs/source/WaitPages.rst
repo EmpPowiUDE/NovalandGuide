@@ -184,11 +184,11 @@ Date and Time:
     datetime.datetime(Year, Month, Day, Hours, Minutes, Seconds)
 
 
-Um später checken zu können, ob die eingegeben Bedingungen erfüllt worden sind, brauchen wir das Datum und die Uhrzeit der teilnehmenden Personen.
+To check whether the given conditions have been met, we need to obtain the date and time of the participating individuals:
 
 .. code-block:: console
 
-    datetime.datetime.now(9
+    datetime.datetime.now()
 
 
 Activate the WaitPage
@@ -206,13 +206,13 @@ Example
 
 .. code-block:: console
 
-    class Phase_4_Page_0_zuspaet(Page):
+    class TooLatePage(Page):
         @staticmethod
         def is_displayed(player: Player):
-        if player.session.config['waitingPageActivated'] == True and datetime.datetime.now() > datetime.datetime(2022, int(
+        if player.session.config['SessionConfigValueName'] == True and datetime.datetime.now() > datetime.datetime(2022, int(
                         player.session.config['dateNovaland'][2:4]), int(player.session.config['dateNovaland'][:2]), int(
-                        player.session.config['zuSpaetTimePhase4'][:2]), int(
-                        player.session.config['zuSpaetTimePhase4'][2:4]), 0):
+                        player.session.config['tooLateTimePage'][:2]), int(
+                        player.session.config['tooLateTimePage'][2:4]), 0):
             return True
         else:
             return False
@@ -259,3 +259,4 @@ You can insert a timer in the HTML file of the waiting page to reload the page i
 
 
 The HTML code you provided is a meta tag that instructs the browser to refresh the current web page after a certain amount of time has passed. In this case, the "content" attribute is set to "10", which means the page will automatically refresh after 10 seconds.
+

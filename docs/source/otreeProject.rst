@@ -347,7 +347,13 @@ Save value in the participant variable:
         player.participant.ValueName1 = Value_1
         player.participant.ValueName2 = Value_2
 
-Use saved values:
+
+Here, "player" refers to the current player object, and "participant" refers to the participant object associated with that player.
+"ValueName1" and "ValueName2" are two custom attributes that are being set, and "Value_1" and "Value_2" are their corresponding values.
+
+Once these values are set, they can be accessed using the same syntax throughout the experiment, and can be used for various purposes such as tracking participant characteristics, storing experimental conditions, or for creating customized feedback messages.
+
+used to retrieve the saved values of two custom attributes, "ValueName1" and "ValueName2", from the participant object of the current player.
 
     __init__.py file in app:
 
@@ -355,7 +361,6 @@ Use saved values:
 
         New_Value_1 = player.participant.ValueName1
         New_Value_2 = player.participant.ValueName2
-
 
 
 SESSION_FIELDS
