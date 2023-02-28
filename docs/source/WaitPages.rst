@@ -258,5 +258,5 @@ You can insert a timer in the HTML file of the waiting page to reload the page i
     <meta http-equiv="refresh" content="10">
 
 
-The HTML code you provided is a meta tag that instructs the browser to refresh the current web page after a certain amount of time has passed. In this case, the "content" attribute is set to "10", which means the page will automatically refresh after 10 seconds.
-
+The HTML code you provided is a meta tag that instructs the browser to refresh the current web page after a certain amount of time has passed.
+In this case, the "content" attribute is set to "10", which means the page will automatically refresh after 10 seconds.

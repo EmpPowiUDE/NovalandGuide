@@ -4,7 +4,7 @@ Data Collection
 Novaland enables the collection of diverse participant behavior data through an online process.
 Just follow a few steps to gather the information.
 
-Upload your project on Heroku:
+Upload your project on Heroku
 ================================
 The goal is to deliver the new version of Novaland on the existing server.
 The Project is already available on the Heroku Server.
@@ -70,13 +70,15 @@ After making all settings.
 Individual settings for the session:
 ________________________________
 To be able to make individual settings, these must already be defined in the Settings.py file in PyCharm.
-    --
 
+Wenn Sie eine Session starten wollen, können Sie unten auf die Session Settings gehen.
+Dort können Sie Einstellungen treffen, welche entweder von oTree vorgegeben sind oder welche, sie in der settings.py in den SESSION_CONFIGS selber bestimmen können.
+Hier finden Sie ein Beispiel, um die WaitPages individuell Zeitabhängig zu machen.
 
+:ref:`oTreeProject`
 
 
 in HTML nutzen - javscript & Django
-Python - LiveSend & Models
 Session Values für die Wahlen etc.
 
 Wahlen Tabelle
@@ -133,14 +135,14 @@ For Example:
         for i in range(len(players)):
             row = rows[i]
             player = players[i]
-            player.Einkommen = int(row['Einkommen'])
-            player.Korruption = int(row['Korruption'])
-            player.Arbeitslos = int(row['Arbeitslos'])
-            player.Brandbetroffen = int(row['Brandbetroffen'])
-            player.participant.CSVEINKOMMEN = int(row['Einkommen'])
-            player.participant.CSVKORRUPTION = int(row['Korruption'])
-            player.participant.CSVARBEITSLOS = int(row['Arbeitslos'])
-            player.participant.CSVBRANDBETROFFEN = int(row['Brandbetroffen'])
+            player.Income = int(row['Income'])
+            player.Corruption = int(row['Corruption'])
+            player.Jobless = int(row['Jobless'])
+            player.FireAffected = int(row['FireAffected'])
+            player.participant.CSVIncome = int(row['Income'])
+            player.participant.CSVCorruption = int(row['Corruption'])
+            player.participant.CSVJobless = int(row['Jobless'])
+            player.participant.CSVFireAffected = int(row['FireAffected'])
 
 
 
@@ -182,16 +184,16 @@ This is done by calling the "get_players()" method on the subsession object, whi
     for i in range(len(players)):
         row = rows[i]
         player = players[i]
-        player.Einkommen = int(row['Einkommen'])
-        player.Korruption = int(row['Korruption'])
-        player.Arbeitslos = int(row['Arbeitslos'])
-        player.Brandbetroffen = int(row['Brandbetroffen'])
-        player.participant.CSVEINKOMMEN = int(row['Einkommen'])
-        player.participant.CSVKORRUPTION = int(row['Korruption'])
-        player.participant.CSVARBEITSLOS = int(row['Arbeitslos'])
-        player.participant.CSVBRANDBETROFFEN = int(row['Brandbetroffen'])
+        player.Income = int(row['Income'])
+        player.Corruption = int(row['Corruption'])
+        player.Jobless = int(row['Jobless'])
+        player.FireAffected = int(row['FireAffected'])
+        player.participant.CSVIncome = int(row['Income'])
+        player.participant.CSVCorruption = int(row['Corruption'])
+        player.participant.CSVJobless = int(row['Jobless'])
+        player.participant.CSVFireAffected = int(row['FireAffected'])
 
 
 The function then gets a list of players from the "subsession" object and loops over them.
-For each player, it retrieves the corresponding row of data from the list of dictionaries and sets the player's attributes (Einkommen, Korruption, Arbeitslos, Brandbetroffen) to the values from the row.
-The function also sets the values from the row to these participant values (CSVEINKOMMEN, CSVKORRUPTION, CSVARBEITSLOS, CSVBRANDBETROFFEN).
+For each player, it retrieves the corresponding row of data from the list of dictionaries and sets the player's attributes (Income, Corruption, Jobless, FireAffected) to the values from the row.
+The function also sets the values from the row to these participant values (CSVIncome, CSVCorruption, CSVJobless, CSVFireAffected).
