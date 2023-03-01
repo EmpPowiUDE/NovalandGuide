@@ -51,7 +51,7 @@ Download GitHub for your Computer.
     https://desktop.github.com/
 
 
-When you are logged in you need to download this reposority.
+When you are logged in you need to download this repository.
 
 .. code-block:: console
 

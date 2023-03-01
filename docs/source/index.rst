@@ -27,6 +27,10 @@ Contents
    Buttons
    WaitPages
    AddPictures
-   DataCollection
    Heroku
+   DataCollection
+   RandomiseValues
+   BankAccount
+   Election
+
 
