@@ -27,6 +27,7 @@ Contents
    Buttons
    WaitPages
    AddPictures
+   SendDataLive
    Heroku
    DataCollection
    RandomiseValues
