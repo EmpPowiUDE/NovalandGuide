@@ -23,15 +23,17 @@ Contents
    installation
    otreeProject
    CreateANewPage
-   ModifyingHTML
+   BasicStructureOfAPage
    Buttons
    WaitPages
    AddPictures
+   ModifyingHTML
    SendDataLive
    Heroku
    DataCollection
    RandomiseValues
    BankAccount
+   DataRetrievalwithSessionFieldValue
    Election
 
 
