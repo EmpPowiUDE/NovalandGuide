@@ -240,11 +240,11 @@ The second part is to check if the time and date of the participant has exceeded
 
 .. code-block:: console
 
-    datetime.datetime.now() > datetime.datetime(2022, int(                  // Year
-            player.session.config['dateNovaland'][2:4]), int(               // Month
-            player.session.config['dateNovaland'][:2]), int(                // Day
-            player.session.config['zuSpaetTimePhase4'][:2]), int(           // Hour
-            player.session.config['zuSpaetTimePhase4'][2:4]), 0)            // Minutes
+    datetime.datetime.now() > datetime.datetime(2022, int(                  # Year
+            player.session.config['dateNovaland'][2:4]), int(               # Month
+            player.session.config['dateNovaland'][:2]), int(                # Day
+            player.session.config['zuSpaetTimePhase4'][:2]), int(           # Hour
+            player.session.config['zuSpaetTimePhase4'][2:4]), 0)            # Minutes
 
 
 

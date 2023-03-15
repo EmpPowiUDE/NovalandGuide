@@ -51,7 +51,7 @@ Here is an example of how to define a JavaScript function and bind it to a custo
 
     <script>
     function myFunction() {
-        // Add your code here
+        # Add your code here
     }
     </script>
 

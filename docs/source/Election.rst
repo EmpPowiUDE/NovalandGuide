@@ -19,10 +19,10 @@ The following CSS code can be used to style the columns:
     <link href="{% static 'NovalandStyle.css' %}" rel="stylesheet" type="text/css" />
         <style>
         .column1{
-            float: left;        // Determines which side the column should be aligned to
-            width: 70%;         // Percentage of the screen width
-            padding: 10px;      // The amount of space to be left around the object
-            height: 200px;      // The height of the column
+            float: left;        # Determines which side the column should be aligned to
+            width: 70%;         # Percentage of the screen width
+            padding: 10px;      # The amount of space to be left around the object
+            height: 200px;      # The height of the column
     }
         }
        .column2{
@@ -73,11 +73,11 @@ Election HTML Code:
 .. code-block:: console
 
     {% block content %}
-    // First Row
+    # First Row
     <div class="row">
-        <div class="column3">       // First Party
-            <img src="{% static 'Party1PNG' %}" width="30%" class="center" onclick="Party1()">      // Party Image 'Party1PNG' from the static folder + 'onclick' function 'Party1()'
-            <p class="p" style="text-align: center"> <input type="radio" id="election1" name="Party" value="Party 1"> Party 1 </p>      // Radio button with the id'election1', the name 'Party and the value 'Party 1'
+        <div class="column3">       # First Party
+            <img src="{% static 'Party1PNG' %}" width="30%" class="center" onclick="Party1()">      # Party Image 'Party1PNG' from the static folder + 'onclick' function 'Party1()'
+            <p class="p" style="text-align: center"> <input type="radio" id="election1" name="Party" value="Party 1"> Party 1 </p>      # Radio button with the id'election1', the name 'Party and the value 'Party 1'
         </div>
 
         <div class="column3">
@@ -86,7 +86,7 @@ Election HTML Code:
         </div>
     </div>
         <br>
-    // Second Row
+    # Second Row
     <div class="row">
         <div class="column3">
             <img src="{% static 'Party3PNG.png' %}" width="30%" class="center" onclick="Party3()">
@@ -101,7 +101,7 @@ Election HTML Code:
     {% endblock %}
 
     {% block script %}
-    <script>    // Javascript are to define the functions
+    <script>    # Javascript are to define the functions
         function Party1(){
             document.getElementById("Election1").checked = true
         }

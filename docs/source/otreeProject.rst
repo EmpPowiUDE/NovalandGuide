@@ -153,15 +153,15 @@ Here's an example of how you might use this function:
 .. code-block:: console
 
     SESSION_CONFIGS = [
-    // It is possible to name several apps.
-    // App 1:
+    # It is possible to name several apps.
+    # App 1:
     {
-        name='project_Name_1',                       // The name of the project
-        display_name_1='Project_Display_name_1',     // The Name that is displayed when you start the app
-        num_demo_participants=3,                     // Number of the participants
-        app_sequence=['app_1', 'app_2],              // All apps that will be represented in this project.
+        name='project_Name_1',                       # The name of the project
+        display_name_1='Project_Display_name_1',     # The Name that is displayed when you start the app
+        num_demo_participants=3,                     # Number of the participants
+        app_sequence=['app_1', 'app_2],              # All apps that will be represented in this project.
     },
-    // App 2:
+    # App 2:
     {
         name='project_name_2',
         display_name='Project_Display_name_2',

@@ -10,7 +10,7 @@ For instance:
 .. code-block:: console
 
     <div id='uniqueID'>
-        // your code
+        # your code
     </div>
 
 To change the content of this area, we can use a JavaScript function based on the example given below:

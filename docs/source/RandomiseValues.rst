@@ -69,9 +69,11 @@ Explanation about the Example Code:
     f = open('participants_data.csv', encoding='utf-8-sig')
 
 
-The 'open' function takes two arguments: the first is the filename (in this case, 'participants_data.csv') and the second is the mode in which to open the file.
-The 'encoding' parameter is used to specify the character encoding used in the file. In this case, 'utf-8-sig' is used, which is a variant of the UTF-8 encoding that includes a byte-order mark (BOM) at the beginning of the file.
-The BOM is a special character sequence that indicates the byte order of the data in the file, and it can be used by some programs to determine the file's encoding automatically.
+The 'open' function is used to access a file called 'participants_data.csv'.
+It has two parts: the first part is the name of the file, and the second part is how the file should be opened.
+The 'encoding' parameter tells the computer which characters are used in the file.
+In this case, 'utf-8-sig' is used, which is a way of encoding that includes a special marker at the beginning of the file.
+This marker tells the computer which way the data is arranged in the file and helps some programs figure out what kind of text it is.
 
 Once the file is opened, the returned file object is assigned to the variable 'f'. The file object can then be used to read data from the file using various methods.
 
@@ -80,14 +82,9 @@ Once the file is opened, the returned file object is assigned to the variable 'f
     rows = list(csv.DictReader(f))
 
 
-The 'DictReader' method reads the file and returns an object that can be used to iterate over the rows in the file.
-Each row is represented as a dictionary, where the keys are the column headers from the CSV file and the values are the corresponding values in the row.
-
-The 'f' variable in this code represents a file object that has been opened for reading using the 'open' function earlier in the code.
-The 'DictReader' method takes this file object as an argument, which allows it to read the contents of the file.
-
-The resulting list of dictionaries is assigned to the variable 'rows', which can be used to access the data from the CSV file later in the code.
-By creating a list of dictionaries, this code makes it easy to access the data by column name (i.e. the keys in each dictionary) rather than by index (i.e. the positions of values in each row).
+The 'DictReader' function reads a CSV file and returns a special type of list that is made up of dictionaries. Each dictionary represents a row in the CSV file, where the keys are the column headers and the values are the corresponding values in each row.
+This makes it easy to access the data by column name instead of position.
+In this code, the 'f' variable represents the CSV file that was opened earlier, and the resulting list of dictionaries is stored in the 'rows' variable for later use.
 
 .. code-block:: console
 
@@ -97,6 +94,7 @@ The line retrieves a list of all the players in the current subsession.
 This is done by calling the "get_players()" method on the subsession object, which returns a list of player objects.
 
 .. code-block:: console
+
     for i in range(len(players)):
         row = rows[i]
         player = players[i]

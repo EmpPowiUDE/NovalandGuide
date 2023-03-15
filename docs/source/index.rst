@@ -21,6 +21,7 @@ Contents
 -----------------------------------------
 .. toctree::
    installation
+   CreateANewApp
    otreeProject
    CreateANewPage
    BasicStructureOfAPage
@@ -29,11 +30,11 @@ Contents
    AddPictures
    ModifyingHTML
    SendDataLive
-   Heroku
-   DataCollection
    RandomiseValues
    BankAccount
    DataRetrievalwithSessionFieldValue
    Election
+   Heroku
+   DataCollection
 
 
