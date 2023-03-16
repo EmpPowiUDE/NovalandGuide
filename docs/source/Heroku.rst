@@ -82,9 +82,10 @@ ____________________________
 
 Papertrail
 ==========================
-Papertrail is a powerful log management solution that helps developers keep their applications running smoothly. With Papertrail's central log management, developers can easily find and fix issues without having to sift through multiple log sources.
-With Papertrail, you can quickly and easily see all of your Heroku logs in one place.
-No more logging into multiple systems just to find what you need - Papertrail has got you covered.
+Papertrail is a great tool that you can use to manage logs for your applications.
+With Papertrail's centralized log management, you can easily find and fix issues without having to search through multiple log sources.
+Using Papertrail, you can quickly and conveniently view all of your Heroku logs in one place.
+This means I no longer have to log into multiple systems just to find the information you need - Papertrail has got me covered.
 
 Here are just a few of the great features you'll get with Papertrail on Heroku:
 
@@ -96,9 +97,8 @@ Here are just a few of the great features you'll get with Papertrail on Heroku:
 
 Sentry
 ==========================
-Sentry is an error tracking and monitoring software that helps developers identify and resolve issues in their applications.
-Sentry integrates with various platforms, including Heroku, to provide real-time alerts, stack traces, and error details to developers, enabling them to quickly fix bugs and improve the performance of their applications.
-By integrating Sentry with Heroku, developers can receive notifications about errors and performance issues that occur within their Heroku-hosted applications, allowing them to resolve issues before they affect users.
+By integrating Sentry with Heroku, you can receive notifications about any errors or performance issues that occur within your Heroku-hosted applications.
+This way, you can resolve any issues before they affect your users, ensuring that your applications run smoothly and efficiently.
 
 What features does Sentry offer on Heroku?
 
@@ -107,3 +107,20 @@ What features does Sentry offer on Heroku?
     3. Collaboration tools for development teams
     4. Customizable alerts and notifications
     5. Integration with various programming languages and frameworks
+
+Metrics:
+=======================
+Metrics of an app on Heroku can provide valuable insights into the performance and state of your application.
+With this information, you can identify and resolve issues before they become serious problems for your users.
+How to read and interpret the metrics of your Heroku app to optimize and improve your application.
+
+Overview of Metrics:
+Heroku offers a variety of metrics that you can access through the dashboard or the Command Line Interface (CLI). Some of the key metrics include:
+
+    1. Web and Worker Dyno Metrics: This metric indicates how many dynos are active for your web and worker tests.
+    2. HTTP Requests: This metric indicates how many HTTP requests your application has processed.
+    3. Memory Usage: This metric indicates how much memory your application has used.
+    4. CPU Utilization: This metric indicates how much CPU power your application has used.
+
+Understanding these metrics can help you to monitor and improve the performance of your Heroku app.
+By regularly reviewing these metrics, you can identify and address any issues before they impact your users, ensuring that your application runs smoothly and efficiently.
