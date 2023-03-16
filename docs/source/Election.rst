@@ -174,3 +174,210 @@ init.py:
 
 In the HTML Election code, we selected a value named 'Party' to trigger exactly this variable in the backend and store the information there.
 It is important that the name of the input field is exactly the same as the name in the 'form_field'.
+
+Get the values of all participants
+______________________________________________________
+
+After all participants have voted, these values must be stored in the SESSION FIELDS.
+This is to make sure that all elected parties are in one place so that they can be counted.
+
+.. code-block:: console
+
+    class Phase_4_Page_10(Page):
+        @staticmethod
+        def vars_for_template(player: Player):
+            try:
+                player.session.PARTY = player.session.PARTY + player.Party
+            except KeyError:
+                player.session.PARTY = player.Party
+
+
+To begin with, we take the session field file containing the party votes and count the number of votes for each party within the session field.
+From this, we can calculate the percentage of each party, which is important to display the results visually for the participants.
+
+Next, we create a list that includes the order of the participants' votes.
+
+.. code-block:: console
+
+    AllVotes = player.session.PARTEI
+
+    Party1Votes = AllVotes.count("Party1")
+    Party2Votes = AllVotes.count("Party2")
+    Party3Votes = AllVotes.count("Party3")
+    Party4Votes = AllVotes.count("Party4")
+
+    Party1Percent = (Party1Votes / AllVotes) * 100
+    Party2Percent = (Party2Votes / AllVotes) * 100
+    Party3Percent = (Party3Votes / AllVotes) * 100
+    Party4Percent = (Party4Votes / AllVotes) * 100
+
+    ElectionList = sorted([Party1Percent, Party2Percent, Party3Percent, Party4Percent])
+
+These values are the basis for the visual representation and for the further course of the study.
+Since these values have an influence on the formation of government in Novaland.
+These variables can now be saved.
+
+Visual representation
+=========================
+In order to present the results we have decided to use different options.
+
+Diagram
+_________________
+
+This diagram serves as a guideline for the participants on how decisions were made in Novaland. Such a diagram can be designed using CSS.
+Here we provide an example of such a diagram.
+
+It is a larger diagram that will be commented on separately and explanations will follow.
+The main focus is to understand how to work with it.
+
+In essence, this code defines a layout consisting of a box containing four skills represented by bar graphs with percentage values.
+The four skills are Party1, Party2, Party 3, and Party4. Each bar has a name centered below it.
+
+The box is relatively positioned and horizontally and vertically centered.
+The skills are arranged using flexbox, so they are evenly distributed across the available space.
+
+The bar graphs are styled using the .graph selector.
+Each bar graph has an absolute positioning command and a percentage value that specifies the height of the bar. The bars also have a background color and a foreground color created by a linear gradient.
+
+The percentage values are displayed in a centered text element with a black font.
+The name of the skill is also centered below the bar graph and has a black background and white text.
+
+CSS definition:
+
+.. code-block:: console
+
+    # section defines a container that spans the entire width and height of its parent container.
+    .section{
+             width: 100%;
+             height: 100%;
+         }
+
+    # .box defines a container for the four skills and their corresponding bar charts.
+    # It is positioned relatively, so it is centered horizontally and vertically using the transform property.
+    # It also has a background color, border, and a fixed height of 300 pixels.
+         .box{
+             position: relative;
+             top: 50%;
+             left: 50%;
+             transform: translate(-50%, -50%);
+             width: 100%;
+             height: 300px;
+             background: transparent;
+             border-bottom: 1px solid #000;
+             border-left: 1px solid #000;
+             display: flex;
+         }
+
+    # .box .skill defines a container for each skill and its bar chart.
+    # It is set to flex and has a flex: 1 property to distribute the available space evenly among the four skills.
+         .box .skill {
+             position: relative;
+             flex: 1;
+             text-align: center;
+
+         }
+
+    # box .skill .graph defines the container for the bar chart and its associated styles.
+    # It has absolute positioning, with a width of 20% and a bottom position of 0 so it aligns with the bottom of the skill container.
+    # It also has a background color and a linear gradient to give the bar chart a gradient effect.
+         .box .skill .graph{
+             position: absolute;
+             width: 20%;
+             bottom: 0;
+             background: rgba(0,0,0,.1);
+             left: 50%;
+             transform: translateX(-50%);
+         }
+
+    # box .skill .graph:before and .box .skill .graph:after define the top and bottom layers of the linear gradient applied to the bar chart.
+    # They are also positioned absolutely to fill the entire bar chart container.
+         .box .skill .graph:before{
+             content: '';
+             position: absolute;
+             top: 2px;
+             left: 1px;
+             right: 1px;
+             bottom: 0;
+             background: linear-gradient(0deg, #000000,#200000 );
+         }
+
+         .box .skill .graph:after{
+             content: '';
+             position: absolute;
+             top: 2px;
+             left: 1px;
+             right: 1px;
+             bottom: 0;
+             background: linear-gradient(0deg, #000000,#200000 );
+         }
+
+    # box .skill .graph .percent defines the text element that displays the percentage value for the bar chart.
+    # It is positioned absolutely above the bar chart, centered horizontally using the transform property, and styled with a black font color and bold font weight.
+         .box .skill .graph .percent {
+             position: absolute;
+             top: -20px;
+             left: 50%;
+             transform: translateX(-50%);
+             test-align: center;
+             color: black;
+             front-weight: bold;
+         }
+
+    # box .skill .name defines the text element that displays the skill name below the bar chart.
+    # It is positioned absolutely below the bar chart, centered horizontally using the transform property, and styled with a black font color, white background color, and rounded border.
+         .box .skill .name{
+             position: absolute;
+             bottom: -30%;
+             left: 50%;
+             transform: translateX(-50%);
+             text-align: center;
+             color: black;
+             padding: 1px 3px;
+             border-radius: 4px;
+         }
+
+
+Use the CSS in HTML Area to define the diagram:
+
+.. code-block:: console
+
+    # Here the different CSS classes are called, which rely on each other to display the diagram
+    <section class="section"> #
+        <div class="box">
+
+            # Party 1
+            <div class="skill"> # The individual skills are defined here as bars
+                <div class="graph" style="height:{%Party1Percent%}%">   # This area defines the size of the bar based on the percentage
+                    <div class="percent"> {% Party1Percent %}%</div>    # The visual representation of the percentage
+                </div>
+                <div class="name"> Party1 </div> # Shown name below the bar
+            </div>
+
+            # Party 2
+            <div class="skill">
+                <div class="graph"style="height:{%SPNProzent%}%">
+                    <div class="percent"> {% SPNProzent %}%</div>
+                </div>
+                <div class="name"> SPN </div>
+            </div>
+
+            # Party 3 & 4 uses the same schema
+            ...
+    </section>
+
+
+Dynamic Text
+____________________________
+
+Now, using the results, various dynamic texts can be displayed based only on the final outcome.
+To achieve this, if functions can be easily used.
+
+.. code-block:: console
+    HTML Example:
+    {% if Party1Percent > 10 %}
+    Party 1 has reached more than 10 percent
+    {% endif %}
+
+    Python Example:
+    if Party1Votes + Party2Votes > Party3Votes + Party4Votes:
+        Party1andParty2 = "Party1 and Party2 have more votes"

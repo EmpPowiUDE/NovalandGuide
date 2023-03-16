@@ -26,6 +26,7 @@ Contents
    CreateANewPage
    BasicStructureOfAPage
    Buttons
+   DynamicText
    WaitPages
    AddPictures
    ModifyingHTML
