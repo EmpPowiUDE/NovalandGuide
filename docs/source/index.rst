@@ -36,6 +36,7 @@ Contents
    DataRetrievalwithSessionFieldValue
    Election
    Heroku
+   IndividualSettingsForTheSession
    DataCollection
 
 
