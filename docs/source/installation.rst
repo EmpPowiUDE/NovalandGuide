@@ -85,34 +85,34 @@ They allow you to package your entire project into a single file that can be eas
 Create a oTree.zip
 --------------------
 
-    1. Open the oTree project.
-    2. Enter the following command in the terminal:
+1. Open the oTree project.
+2. Enter the following command in the terminal:
 
 .. code-block:: console
 
     otree zip
 
-    3. The system will then save the project in the project folder.
+3. The system will then save the project in the project folder.
 
 open a oTree.zip
 --------------------------
 
 To open an otree.zip file, follow these steps:
 
-    1. Save the otree.zip file in the folder where you want the project to be located.
+1. Save the otree.zip file in the folder where you want the project to be located.
 
-    2. Open the oTree project.
+2. Open the oTree project.
 
-    3. Use the cd command to navigate to the appropriate folder:
+3. Use the cd command to navigate to the appropriate folder:
 
 .. code-block:: console
 
     cd C:\Documents\Novaland
 
-    4. Enter the command otree unzip followed by the name of the otree.zip file in the terminal:
+4. Enter the command otree unzip followed by the name of the otree.zip file in the terminal:
 
 .. code-block:: console
 
     otree unzip ProjectName.otreezip
 
-    5. Open the new folder in PyCharm.
+5. Open the new folder in PyCharm.
