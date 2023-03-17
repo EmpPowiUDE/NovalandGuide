@@ -7,7 +7,7 @@ Novaland Guide
 =========================================
 
 The Novaland Guide is the documentation of the political behavior game 'Novaland'.
-This was created by the University of Duisburg.
+This was created by the team of Achim Goerres at the University of Duisburg-Essen as part of the ERC-funded project "POLITSOLID" .
 
 The entire project was written and programmed using oTree.
 An oTree project is a web-based platform for conducting economic experiments.
