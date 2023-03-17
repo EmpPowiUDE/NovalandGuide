@@ -43,7 +43,7 @@ To install oTree in PyCharm, follow these steps:
 
 GitHub
 ========================
-The project is uploaded to Github. The first step is to Sign in or to create an account on GitHub.
+The project is uploaded to Github. The first is to Sign in or to create an account on GitHub.
 Download GitHub for your Computer.
 
 .. code-block:: console
@@ -60,8 +60,7 @@ When you are logged in you need to download this repository.
 Save this folder to your computer and then open it in PyCharm.
 
 Install Django
------------------------
-
+----------------------
     1. Open PyCharm
 
     2. Click on 'file' in the menu
@@ -76,16 +75,15 @@ Install Django
 
     7. Under 'Django project root' select the project on your computer
 
-
 oTree.zip
-=========
+==================
 
 Once everything is installed, if you are collaborating with others and want to share projects with each other, you can use otree.zip files.
 otree.zip files are compressed files that contain all the files and folders necessary to transport or share an oTree project more easily.
 They allow you to package your entire project into a single file that can be easily transferred to another computer or shared with others.
 
 Create a oTree.zip
-_________________
+--------------------
 
     1. Open the oTree project.
     2. Enter the following command in the terminal:
@@ -97,12 +95,14 @@ _________________
     3. The system will then save the project in the project folder.
 
 open a oTree.zip
-_______________________
+--------------------------
 
 To open an otree.zip file, follow these steps:
 
     1. Save the otree.zip file in the folder where you want the project to be located.
+
     2. Open the oTree project.
+
     3. Use the cd command to navigate to the appropriate folder:
 
 .. code-block:: console
