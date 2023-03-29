@@ -7,15 +7,13 @@ Development Environment
 Feel free to use any preferred development environment.
 The following guide is primarily crafted for use with the 'PyCharm' development platform.
 
+.. _pycharm-download:
+
 Download PyCharm
 ------------------------
 The advantage of PyCharm is that it has been developed especially for Python.
 
-Download Pycharm:
-
-.. code-block:: console
-
-    https://www.jetbrains.com/de-de/pycharm/download
+`Download Pycharm <{{ html_context['pycharm_download_url'] }}>`_.
 
 oTree
 ========================

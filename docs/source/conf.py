@@ -19,7 +19,8 @@ release = '0.1'
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
-extensions = []
+extensions = ['sphinx.ext.autosectionlabel']
+autosectionlabel_prefix_document = True
 
 templates_path = ['_templates']
 exclude_patterns = []
@@ -32,3 +33,6 @@ exclude_patterns = []
 html_theme = 'sphinx_rtd_theme'
 html_static_path = ['_static']
 
+html_context = {
+    'pycharm_download_url': 'https://www.jetbrains.com/de-de/pycharm/download',
+}
