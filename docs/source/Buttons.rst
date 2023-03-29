@@ -57,4 +57,3 @@ Here is an example of how to define a JavaScript function and bind it to a custo
 
 The JavaScript function is defined in a script tag, which can be placed either in the HTML file or in a separate file in the 'static' folder of the oTree app.
 By defining the function in a separate file, it can be reused across multiple pages of the app.
-

@@ -13,7 +13,7 @@ Download PyCharm
 ------------------------
 The advantage of PyCharm is that it has been developed especially for Python.
 
-`Download Pycharm <{{ html_context['pycharm_download_url'] }}>`_.
+`PyCharm Download Page <https://www.jetbrains.com/de-de/pycharm/download/>`_
 
 oTree
 ========================
@@ -42,16 +42,11 @@ GitHub
 The project is uploaded to Github. The first step is to Sign in or to create an account on GitHub.
 Download GitHub for your Computer.
 
-.. code-block:: console
-
-    https://desktop.github.com/
-
+`Download GitHub <https://desktop.github.com/>`_
 
 When you are logged in you need to download this repository.
 
-.. code-block:: console
-
-   https://github.com/Nordwindfeld/Novaland.git
+`Novaland GitHub Project <https://github.com/Nordwindfeld/Novaland.git>`_
 
 Save this folder to your computer and then open it in PyCharm.
 
