@@ -94,7 +94,7 @@ Create a oTree.zip
 
 3. The system will then save the project in the project folder.
 
-open a oTree.zip
+Open a oTree.zip
 --------------------------
 
 To open an otree.zip file, follow these steps:
