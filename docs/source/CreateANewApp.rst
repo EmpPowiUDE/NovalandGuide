@@ -25,7 +25,7 @@ To create a new app in oTree, follow these steps:
 
 .. code-block:: console
 
-    otree create_app app_name
+    otree startapp app_name
 
 Replace "app_name" with the name you want to give your app.
 

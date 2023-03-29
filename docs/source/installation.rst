@@ -15,9 +15,7 @@ Download Pycharm:
 
 .. code-block:: console
 
-    `Download Pycharm <SO>`_.
-
-.. _SO: https://www.jetbrains.com/de-de/pycharm/download
+    https://www.jetbrains.com/de-de/pycharm/download
 
 oTree
 ========================
@@ -43,7 +41,7 @@ To install oTree in PyCharm, follow these steps:
 
 GitHub
 ========================
-The project is uploaded to Github. The first is to Sign in or to create an account on GitHub.
+The project is uploaded to Github. The first step is to Sign in or to create an account on GitHub.
 Download GitHub for your Computer.
 
 .. code-block:: console
@@ -74,6 +72,38 @@ Install Django
     6. Press the 'Enable Django Support' button or check if the button is already enabled
 
     7. Under 'Django project root' select the project on your computer
+
+
+Additional installation
+=========================
+
+In Novaland, we use various libraries, so we still need to install "email_validator" and "psycopg2" via the terminal.
+To install these libraries in PyCharm, you can use the package manager called "pip".
+Pip is a command-line tool used for installing Python packages and libraries.
+To install "email_validator" and "psycopg2", you can open the terminal in PyCharm and type the following commands:
+
+email_validator
+--------------------
+"email_validator" is a Python library used for validating email addresses.
+It can be used to check if an email address has a valid format and if it belongs to a valid domain.
+The library provides several methods to validate email addresses, such as "validate_email()" and "is_email()" functions.
+
+Installation
+.. code-block:: console
+
+    pip install email_validator
+
+psycopg2
+---------------------
+"psycopg2" is a Python library used to connect to PostgreSQL databases.
+It provides a way to interact with a PostgreSQL database from a Python script, allowing you to execute queries, insert or update data, and more.
+
+.. code-block:: console
+
+    pip install psycopg2
+
+These commands will download and install the libraries and their dependencies automatically.
+Once the installation is complete, you can import these libraries in your Python code and start using them.
 
 oTree.zip
 ==================

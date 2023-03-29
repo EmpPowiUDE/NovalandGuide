@@ -21,6 +21,7 @@ Contents
 -----------------------------------------
 .. toctree::
    installation
+   PyCharmOverview
    CreateANewApp
    otreeProject
    CreateANewPage
