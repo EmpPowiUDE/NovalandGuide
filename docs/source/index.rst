@@ -20,24 +20,10 @@ The platform is designed to be highly customizable, allowing researchers to crea
 Contents
 -----------------------------------------
 .. toctree::
+   :maxdepth: 1
+
    installation
-   PyCharmOverview
-   CreateANewApp
-   otreeProject
-   CreateANewPage
-   BasicStructureOfAPage
-   Buttons
-   DynamicText
-   WaitPages
-   AddPictures
-   ModifyingHTML
-   SendDataLive
-   RandomiseValues
-   BankAccount
-   DataRetrievalwithSessionFieldValue
-   Election
-   Heroku
-   IndividualSettingsForTheSession
-   DataCollection
-
-
+   ProjectOverview
+   Pages
+   WorkingWithDatas
+   Deployment
