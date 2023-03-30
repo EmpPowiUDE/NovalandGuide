@@ -11,7 +11,7 @@ This allows you to have all the built-in form fields filled out by the participa
 .. code-block:: console
     :linenos:
 
-    {% next button %}
+    {% next_button %}
 
 Costumized Button
 =====================

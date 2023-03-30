@@ -213,8 +213,7 @@ Next, we create a list that includes the order of the participants' votes.
 
     ElectionList = sorted([Party1Percent, Party2Percent, Party3Percent, Party4Percent])
 
-These values are the basis for the visual representation and for the further course of the study.
-Since these values have an influence on the formation of government in Novaland.
+These values are the basis for the visual representation and for the further course of the study since these values have an influence on the formation of government in Novaland.
 These variables can now be saved.
 
 Visual representation

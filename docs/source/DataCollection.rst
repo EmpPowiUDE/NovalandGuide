@@ -102,7 +102,7 @@ Here are the steps to follow:
     4. You will now see a button labeled 'Close this room' next to the 'Go to active session' section
     5. Press this button to end the session.
 
-Download Datas of the participants
+Download Data of the participants
 =========================================
 The participant data and page times can be downloaded in a separate window called 'Data', located at the top of the oTree bar.
 This window provides access to CSV files containing all the collected information from all the apps.

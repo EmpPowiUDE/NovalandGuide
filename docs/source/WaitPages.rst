@@ -94,12 +94,12 @@ You can use this function to group participants by the order in which they arriv
 
 Customized Wait Page
 ========================
-In Novaland there are mainly witePages, which depend on a certain time of day.
+In Novaland there are mainly Wait Pages, which depend on a certain time of day.
 
 The first step is to create a normal wait page.
 In this, we want to include a timer and a variable that both need to be fulfilled for the page to be displayed and disappear automatically after a certain time.
-Die Variable wird in der settings.py erstellt und kann dadurch, Einfluss auf teilnehmenden Personen und allen Seiten, egal in welcher App.
-Diese kann dann beim erstellen, der Session individuell eingestellt werden.
+The variable is created in the settings.py file and as a result, can have an impact on all pages and participants, regardless of the app.
+This variable can then be individually configured when creating a session.
 
 Session config variable
 __________________________

@@ -39,7 +39,7 @@ In the second step, you link the stylesheet to your project using HTML.
     <link href="{% static 'NovalandStyle.css' %}" rel="stylesheet">
 
 
-Here is a template to apply to their HTML site:
+Here is a template to apply to the HTML site:
 
 .. code-block:: console
     :linenos:

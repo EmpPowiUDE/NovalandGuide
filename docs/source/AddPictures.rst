@@ -12,7 +12,7 @@ Definition:
  These files are served by the web server without any modification and can be shared by multiple pages within the application.
  By using a static folder, you can separate your static assets from your application code, making it easier to maintain and update your application.
 
-To use the _static Fodler, you need to open the project on your computer and add the file there.
+To use the _static Folder, you need to open the project on your computer and add the file there.
 
 Add the picture to a Page
 =============================

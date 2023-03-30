@@ -1,8 +1,6 @@
 ================================
 Send Data with a live Method
 ================================
-The live_method feature allows for real-time updates to be sent from the server to the participant's browser without requiring a full page refresh. To use live_method, data must first be sent using livesend.
-The data that is sent via livesend can be received by the live_method function, which can then trigger a function in the backend that can have an impact on the participant.
 
 livesend
 __________________________
@@ -54,7 +52,7 @@ Now we have written a JavaScript function that sends data to init.py when a butt
 
 live_method
 __________________________
-he live_method feature allows for real-time updates to be sent from the server to the participant's browser without requiring a full page refresh.
+The live_method feature allows for real-time updates to be sent from the server to the participant's browser without requiring a full page refresh.
 To use live_method, data must first be sent using livesend.
 The data that is sent via livesend can be received by the live_method function, which can then trigger a function in the backend that can have an impact on the participant.
 
@@ -81,13 +79,13 @@ To send information back to the live participant page, you can create a LiveRecv
 Here's an example of a LiveRecv function:
 
 .. code-block:: console
-
-
+    <script>
     function liveRecv(data) {
             if (data['type'] == 'NextPage') {
                 document.getElementById("form").submit();
             }
         }
+    </script>
 
 This function takes a single parameter called data, which is expected to be an object that contains information sent from the server to the client browser.
 In this example, the function checks if the type key in the data object is equal to the string 'NextPage' using an if statement.

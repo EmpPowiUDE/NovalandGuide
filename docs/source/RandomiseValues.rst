@@ -5,7 +5,7 @@ There are several ways to randomize numbers and inputs.
 In Novaland, we have used the tactic of creating a table and determining the values that have an impact on the game beforehand.
 This way, we prevent too many similar results from occurring.
 
-Create and import a CSV Data
+Create a CSV Data
 ____________________________________
 
 There are many different tools that can be used to create CSV data, including Excel, for example.
@@ -26,10 +26,39 @@ When creating a CSV file, there are several things to keep in mind:
 
     7. File extension: Use the .csv file extension to ensure that the file is recognized as a CSV file and can be opened correctly by programs that support CSV files.
 
+Here is an example of a CSV data:
+
+.. code-block:: console
+
+    ID, Income, Corruption, Jobless, Fireaffected
+    0,2,1,1,0
+    1,2,0,1,0
+    2,0,0,0,0
+    3,1,0,0,0
+    ...
+
+The first row contains the names of the fields, while subsequent rows contain the actual data values.
+This type of document can be created with a simple text editor.
+It is important to replace the old document type with ".csv" after saving the document.
+
+.. raw:: html
+
+   <a href="docs/source/_static/CSVEXAMPLE.png" download>Download CSV file</a>
+
+.. image:: docs/source/_static/CSVEXAMPLE.PNG
+    :width: 400
+
+Import a CSV data
+_______________________
+
 Now you can place the CSV file in the Novaland folder and use it from there.
 
-To be able to use the individual values in your project, we will write some code in the init.py file, in which the program reads the values and assigns them to each participant.
+When you open a CSV file in PyCharm, it provides you with a preview of the file's contents, allowing you to verify the ordering of the data and check for any errors you may have made.
 
+.. image:: docs/source/_static/CSV_Data.PNG
+
+
+To be able to use the individual values in your project, we will write some code in the init.py file, in which the program reads the values and assigns them to each participant.
 First, we need to install the CSV library:
 
 .. code-block:: console
