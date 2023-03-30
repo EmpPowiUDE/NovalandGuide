@@ -94,6 +94,33 @@ Pages can be part of a Subsession, which represents a group of players in a sing
 .. image:: docs/source/_static/Overview_1.png
   :width: 400
 
+Object hierarchy
+=====================
+In oTree, the different components are organized into a hierarchy.
+
+.. image:: docs/source/_static/Object_hierarchy.png
+  :width: 400
+
+
+- At the top is a session, which is made up of subsessions
+- Each subsession contains multiple groups
+- Each group contains multiple players
+- Each player goes through several pages
+
+You can access any higher-level component from a lower-level component:
+
+For example, you can access a player's group or subsession, and a group's session or subsession.
+
+.. code-block:: console
+
+    player.participant
+    player.group
+    player.subsession
+    player.session
+    group.subsession
+    group.session
+    subsession.session
+
 Group
 _____________________
 This class represents a group of players within a single round of the game.
