@@ -2,6 +2,10 @@
 oTree Project
 ======================
 
+An oTree project consists of several files and components, and this chapter provides a basic explanation of the most essential ones.
+The purpose of this chapter is to provide a surface-level overview of all the components of oTree and briefly explain them.
+This chapter does not have to be fully understood but rather serves as a reference for readers to look up if questions arise during programming or while reading this guide.
+
 An oTree project consists of several components, including:
 
     **The settings.py file**
@@ -60,16 +64,40 @@ Models
 An oTree app has 3 data models: Subsession, Group, and Player.
 A player is part of a group, which is part of a subsession.
 
+Conceptual overview
+=====================
+
+Session
+_______________________
+The session in oTree is a fundamental concept, as it allows for the randomization of treatments and conditions across groups and rounds, as well as for the aggregation of data across participants.
+The session data can be accessed and analyzed using various built-in functions and methods, and can be exported for further analysis outside of oTree.
+When designing an experiment in oTree, it is important to consider the structure of the session, including the number of participants, the number of groups, and the number of rounds.
+The session can also be customized with various settings, such as the length of rounds, the payment scheme, and the language of the instructions.
+
 Subsession
 _____________________
-This class is used to define the behavior of a group of players in a single round of the game.
-It is responsible for creating the groups of players and setting the rules for how they interact with each other.
+Each session is composed of one or more subsessions, which represent the behavior of a group of players in a single round of the game.
+The subsession is responsible for creating the groups of players and setting the rules for how they interact with each other.
+By breaking the session into subsessions, the experiment can be designed to allow for different treatments or conditions to be randomized across groups and rounds.
+This can help to improve the validity and reliability of the results.
+
+.. image:: docs/source/_static/Overview_1_vers2.png
+  :width: 400
+
+Page
+___________________
+Pages in oTree are the building blocks of an experiment and represent a single web page presented to the participant.
+They can include different types of content and define the structure of the experiment.
+Pages can also be customized with various settings, such as the timer length and display of a progress bar.
+Pages can be part of a Subsession, which represents a group of players in a single round of the game, but they are not necessarily always associated with Subsessions.
+
+.. image:: docs/source/_static/Overview_1.png
+  :width: 400
 
 Group
 _____________________
 This class represents a group of players within a single round of the game.
 It can be used to track information that is specific to the group as a whole, such as the group's score or the decisions that the group makes.
-
 
 Player
 ______________________
@@ -111,28 +139,38 @@ In this case, the ParticipantName field can store text variables for the partici
 
 Formfields
 _________________________________
-To use the saved variables on other pages of the app, you can retrieve them through the Player variable.
-oTree provides the formfields function to make it easy to define the form inputs and specify their appearance.
-Using this function, you can specify the form and appearance of the field object.
+To retrieve saved variables on other pages of the app, use the Player variable.
+To define form inputs and specify their appearance, use the formfields function provided by oTree.
+With this function, you can customize the form and appearance of field objects.
+
+We provide an example below:
+
+.. code-block:: console
+
+    NewVariable = models.StringField(
+            choices=[["Male", "M"], ["Female", "F"], ["Non-Binary", "NB"]],
+                    label="Please select your gender",
+                    widget=widgets.RadioSelect
+            )
+
+
+This code defines a StringField that represents a string value, with choices that are displayed to the participant using a RadioSelect widget.
+The label argument specifies the text displayed next to the input field on the participant's page.
+The choices argument is a list of sub-lists where each sub-list contains two elements: a string to be displayed to the participant and a string value that represents the selected choice.
+
+The general representation is as follows:
 
 .. code-block:: console
 
     NewVariable = models.StringField(
         choices=[["ParticipantView1", "BackendValue1"], ["ParticipantView2", "BackendValue2"]],
-                label="This is the title or the descripton of the input from the participant",
+                label="This is the title or the description of the input from the participant",
                 widget=widgets.RadioSelect
         )
 
 
-models.StringField is a field type that represents a string value.
-The choices argument provides a list of lists, where each sub-list contains two elements: a string to be displayed to the participant, and a string value that represents the choice selected by the participant.
-In this case, there are two choices available: "ParticipantView1" and "ParticipantView2", which correspond to the backend values "BackendValue1" and "BackendValue2", respectively.
-
-The label argument provides the text that will be displayed next to the input field on the participant's page.
-It can be used to describe the purpose of the input or provide additional instructions.
-
-The widget argument specifies the type of widget that will be used to display the input to the participant.
-In this case, it is set to RadioSelect, which will display the choices as a set of radio buttons that the participant can select from.
+This defines a StringField with two available choices represented by the strings "ParticipantView1" and "ParticipantView2", corresponding to backend values "BackendValue1" and "BackendValue2", respectively.
+The label argument provides the text displayed next to the input field on the participant's page."
 
 
 Settingy.py file
@@ -211,13 +249,12 @@ _______________________
 Is a list of fields that you can use to store information about each participant in your experiment.
 Each field is defined as a tuple, with the first element being the field name, and the second element being the field type.
 
-The information stored in these fields can then be used in the oTree app to personalize the experience for each participant, or to gather data for analysis.
-Its storing information about one participant that can be used across the entire project, not just within individual apps.
+The main difference with formfields is that Player variables can be used across the entire oTree project, not just within individual apps.
+These fields store information about a single participant that can be used to personalize their experience or gather data for analysis within the app.
 
 Example:
 We create a variable in Settings.py that can be used for a participant for the whole project.
 This data is stored there and therefore can be replayed in other apps.
-
 
 Create participant value
 
@@ -238,12 +275,9 @@ Save value in the participant variable:
         player.participant.ValueName2 = Value_2
 
 
-Here, "player" refers to the current player object, and "participant" refers to the participant object associated with that player.
-"ValueName1" and "ValueName2" are two custom attributes that are being set, and "Value_1" and "Value_2" are their corresponding values.
-
-Once these values are set, they can be accessed using the same syntax throughout the experiment, and can be used for various purposes such as tracking participant characteristics, storing experimental conditions, or for creating customized feedback messages.
-
-used to retrieve the saved values of two custom attributes, "ValueName1" and "ValueName2", from the participant object of the current player.
+The 'player' refers to the current player object, while 'participant' refers to the participant object associated with that player.
+'ValueName1' and 'ValueName2' are custom attributes that have been set, and 'Value_1' and 'Value_2' are their respective values.
+These values can be accessed using the same syntax throughout the experiment and can be used for tracking participant characteristics, storing experimental conditions, or creating customized feedback messages."
 
     __init__.py file in app:
 
@@ -316,9 +350,37 @@ Example:
     ADMIN_USERNAME = 'admin'
 
 
-ADMIN_PASSWORD = environ.get('OTREE_ADMIN_PASSWORD')
+ADMIN_PASSWORT
+___________________
+The ADMIN_PASSWORD is a setting in oTree that allows the researcher to access the administrative features of the experiment.
+It is a unique password that should be kept secure, as anyone who knows the password can access and modify the experiment.
+The password can be set in the settings.py file of the oTree project, and should be changed from the default setting for security purposes.
 
-SECRET_KEY = '6079585529411'
+.. code-block:: console
+
+    ADMIN_PASSWORT = 'your_password_here'
+
+To make the password even more secure, add 'environ.get'.
+By using "environ.get", the project reads the password value from the Heroku environment variables.
+This approach provides an added layer of security as the password is not hardcoded into the code and is not publicly visible.
+The password is stored as an environment variable named "OTREE_ADMIN_PASSWORD".
+
+.. code-block:: console
+
+    ADMIN_PASSWORD = environ.get('OTREE_ADMIN_PASSWORD')
+
+
+SECRET_KEY
+____________________
+The SECRET_KEY in oTree is a secret password used for securing data within an oTree project.
+It is used to support cryptographic functions such as data encryption and prevention of data tampering.
+The SECRET_KEY should never be publicly disclosed and should be kept securely.
+
+.. code-block:: console
+
+    SECRET_KEY = '2341734735143'
+
+These numbers are just an example, you can use any numbers you like.
 
 DEBUG
 _____________________________
