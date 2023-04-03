@@ -92,6 +92,10 @@ Basic HTML elements for working with text
 
 Add functions
 ====================
+
+JavaScript
+-----------
+
 With the help of JavaScript, various functions can be integrated on the page.
 The JavaScript code is written between a 'script' element.
 
@@ -101,3 +105,30 @@ The JavaScript code is written between a 'script' element.
     <script> javascript code </script>
 
 To see an example go to the :ref:`buttons-page` page.
+
+init.py functions
+=====================
+In addition to JavaScript functions that are defined directly on the respective page, there are also functions in the backend that can be assigned to the pages directly in the init.py file.
+
+validate E-Mails
+---------------------
+If, for example, a :ref:form-fields has been created, it can be equipped with additional functions.
+When an email address is requested, functions can be added to validate whether the input is really an email.
+
+.. code-block:: console
+
+    from email_validator import validate_email, EmailNotValidError   # Input the email_validator to use it
+
+    class PageName(Page):
+
+    @staticmethod
+    def error_message(player, value):
+        try:
+            # Validate.
+            valid = validate_email(value["f26"].strip(), check_deliverability=False)
+        except EmailNotValidError as e:
+            # email is not valid, exception message is human-readable
+            return 'The entered email address is invalid. Please enter your email address again.''
+
+This is a static method that validates an email address entered in a form field.
+It uses the "validate_email" function and returns an error message if the email is invalid.

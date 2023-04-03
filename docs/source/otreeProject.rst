@@ -164,6 +164,8 @@ To save the input from participants and use it later in an oTree app, you can cr
 
 In this case, the ParticipantName field can store text variables for the participant, while the ParticipantAge field can store integer variables or whole numbers.
 
+.. _form-fields:
+
 Formfields
 _________________________________
 To retrieve saved variables on other pages of the app, use the Player variable.
