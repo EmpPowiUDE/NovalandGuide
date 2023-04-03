@@ -41,56 +41,14 @@ The method returns the value of the value attribute of the player, which is a bo
 If the value is 1, the method returns True, which means that the page should be displayed.
 If the value is not 1, the method returns False, which means that the page should not be displayed.
 
-before_next_page
-________________________
-Runs code before the participant is redirected to the next page.
-You can use this function to perform any necessary updates or calculations before the participant moves on.
-
-Example:
-
-.. code-block:: console
-
-    class PageName(Page):
-        @staticmethod
-        def before_next_page(player: Player):
-            player.group.total_earnings = sum([p.earnings for p in player.group.get_players()])
-
-function calculates the total earnings of all participants in the group and stores the result in the total_earnings attribute of the group.
-
-participant_label
-_________________________
-Returns a string that represents the participant, which is displayed on the wait page to other participants.
-
-Example:
-
-.. code-block:: console
-
-    class PageName(Page):
-        @staticmethod
-        def participant_label(player: Player):
-            return player.participant.code
-
-Returns the code of the participant, which is used to identify the participant on the wait page.
-
 vars_for_template
 _______________________
 Returns a dictionary of variables that will be passed to the wait page's template.
 You can use this function to pass information from the Python code to the HTML template, such as the number of participants that have arrived at the wait page.
 
-after_all_players_arrive
-________________________
-Runs code after all participants have arrived at the wait page.
-You can use this function to perform any necessary updates or calculations after the group has assembled.
-
-get_players_for_group
-________________________
-Returns the participants that are in the same group as the current participant.
-You can use this function to perform group-level calculations or to display information specific to the participant's group.
-
-group_by_arrival_time
-_________________________
-Determines how participants are grouped on the wait page.
-You can use this function to group participants by the order in which they arrived at the wait page, or by some other criterion.
+more functions
+__________________________
+Visit `this page <https://otree.readthedocs.io/en/latest/multiplayer/waitpages.html>`_ for more Wait Page features.
 
 Customized Wait Page
 ========================

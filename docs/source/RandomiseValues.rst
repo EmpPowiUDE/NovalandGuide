@@ -8,23 +8,8 @@ This way, we prevent too many similar results from occurring.
 Create a CSV Data
 ____________________________________
 
+We use the CSV format for inputting and outputting data from the program.
 There are many different tools that can be used to create CSV data, including Excel, for example.
-
-When creating a CSV file, there are several things to keep in mind:
-
-    1. Delimiter: CSV stands for "comma-separated values," so the values in each row should be separated by commas. However, depending on your locale or data formatting needs, you may need to use a different delimiter, such as a semicolon or tab.
-
-    2. Header row: It's a good practice to include a header row at the top of your CSV file that describes the contents of each column.
-
-    3. Quotes: If any of your values contain commas or other special characters, you should enclose them in double quotes to ensure they are correctly parsed.
-
-    4. Encoding: Make sure to use an appropriate character encoding for your data. UTF-8 is a common encoding that supports a wide range of characters and is widely supported.
-
-    5. Consistency: Ensure that the data in your CSV file is consistent, with the same number of columns in each row and consistent data types (e.g., dates formatted the same way).
-
-    6. Cleanliness: Remove any unnecessary characters, formatting or other data that isn't relevant to the data being recorded in the CSV file.
-
-    7. File extension: Use the .csv file extension to ensure that the file is recognized as a CSV file and can be opened correctly by programs that support CSV files.
 
 Here is an example of a CSV data:
 
@@ -37,16 +22,20 @@ Here is an example of a CSV data:
     3,1,0,0,0
     ...
 
-The first row contains the names of the fields, while subsequent rows contain the actual data values.
-This type of document can be created with a simple text editor.
-It is important to replace the old document type with ".csv" after saving the document.
+For example, a CSV data may contain fields such as ID, Income, Corruption, Jobless, and Fireaffected, where the first row contains the names of the fields, and the subsequent rows contain the data values.
+This type of document can be created with a simple text editor, but it's important to save the document with the ".csv" extension to ensure that it is properly recognized as a CSV file.
 
 .. raw:: html
 
-   <a href="docs/source/_static/CSVEXAMPLE.png" download>Download CSV file</a>
+   <a href="_static/ExampleCSV.csv" download>Download CSV file</a>
 
 .. image:: docs/source/_static/CSVEXAMPLE.PNG
     :width: 400
+
+For more informations about CSV:
+
+.. toctree::
+    CSV
 
 Import a CSV data
 _______________________

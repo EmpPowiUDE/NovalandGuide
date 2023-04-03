@@ -1,3 +1,5 @@
+.. _basic-structure-page:
+
 ============================
 Basic structure of the page
 ============================
@@ -97,3 +99,5 @@ The JavaScript code is written between a 'script' element.
     :linenos:
 
     <script> javascript code </script>
+
+To see an example go to the :ref:`buttons-page` page.

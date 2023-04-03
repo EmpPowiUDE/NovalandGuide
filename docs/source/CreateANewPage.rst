@@ -27,4 +27,4 @@ The order of the pages in the page_sequence is important as it determines the or
 
     page_sequence = [PageName, PageName2, PageName3]
 
-The instructions on the `Basic structure of the page <docs/build/html/BasicStructureOfAPage.html>`_ page are essential in order to work with a page in oTree.
+The instructions on the :ref:`basic-structure-page` are essential in order to work with a page in oTree.
