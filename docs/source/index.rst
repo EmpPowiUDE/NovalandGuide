@@ -25,5 +25,5 @@ Contents
    installation
    ProjectOverview
    Pages
-   WorkingWithDatas
+   WorkingWithData
    Deployment

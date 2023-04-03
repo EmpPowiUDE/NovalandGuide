@@ -1,5 +1,5 @@
 =========================================
-Working with datas
+Working with data
 =========================================
 In this chapter, we provide an overview of working with live data.
 This involves reading and manipulating data in real-time to make informed decisions and to create insights for further analysis.
