@@ -39,19 +39,17 @@ To install oTree in PyCharm, follow these steps:
 
 GitHub
 ========================
-The project is uploaded to Github. The first step is to Sign in or to create an account on GitHub.
-Download GitHub for your Computer.
+The project is hosted on GitHub.
+Open a new PyCharm project and go to VCS --> Get from version control.
+Enter the Novaland repository URL in the field "URL" and choose a folder where you save the project.
+PyCharm will fetch the latest Novaland version from the repository.
 
-`Download GitHub <https://desktop.github.com/>`_
+The Novaland repository URL is: https://github.com/EmpPowiUDE/solidarity_game
 
-When you are logged in you need to download this repository.
-
-`Novaland GitHub Project <https://github.com/Nordwindfeld/Novaland.git>`_
-
-Save this folder to your computer and then open it in PyCharm.
-
-Install Django
+(Optional) Enable Django Support
 ----------------------
+You can enable Django support in PyCharm for the Novaland project to e.g. see code completion suggestions in the HTML templates.
+
     1. Open PyCharm
 
     2. Click on 'file' in the menu
@@ -101,8 +99,8 @@ Once the installation is complete, you can import these libraries in your Python
 oTree.zip
 ==================
 
-Once everything is installed, if you are collaborating with others and want to share projects with each other, you can use otree.zip files.
-otree.zip files are compressed files that contain all the files and folders necessary to transport or share an oTree project more easily.
+Once everything is installed, if you are collaborating with others and want to share projects with each other, you can use .otreezip files.
+.otreezip files are compressed files that contain all the files and folders necessary to transport or share an oTree project easily.
 They allow you to package your entire project into a single file that can be easily transferred to another computer or shared with others.
 
 Create a oTree.zip
