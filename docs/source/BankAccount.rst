@@ -6,7 +6,7 @@ To enable the bank account to be used in different phases, participants fields a
 
 Dynamic income
 ------------------------------
-The bank account is based on dynamic income, which is assigned to the participant at the beginning of the game.
+The bank account is based on dynamic income, which is assigned to the participant at the beginning of the game, but may change depending on events in Novaland.
 Based on this, decisions about lifestyle and other things can be made.
 In each phase, a new variable for the account balance is created, allowing access to previous account balances at a later stage.
 

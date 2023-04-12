@@ -34,12 +34,12 @@ Example:
     class PageName(Page):
         @staticmethod
         def is_displayed(player: Player):
-            return player.value == 1
+            return player.income < 1000
 
 
-The method returns the value of the value attribute of the player, which is a boolean indicating whether the value is equal to 1.
-If the value is 1, the method returns True, which means that the page should be displayed.
-If the value is not 1, the method returns False, which means that the page should not be displayed.
+The method returns True if the value of the income attribute of the player is smaller than 1000.
+If the method returns True the page will be displayed.
+If the method returns False the page will not be displayed.
 
 vars_for_template
 _______________________
@@ -52,10 +52,11 @@ Visit `this page <https://otree.readthedocs.io/en/latest/multiplayer/waitpages.h
 
 Customized Wait Page
 ========================
-In Novaland there are mainly Wait Pages, which depend on a certain time of day.
+In Novaland there are mainly Wait Pages which depend on a certain time of day to prevent participants from proceeding
+before and after a certain time.
 
 The first step is to create a normal wait page.
-In this, we want to include a timer and a variable that both need to be fulfilled for the page to be displayed and disappear automatically after a certain time.
+On this page, we include a timer and a variable that both need to be fulfilled for the page to be displayed and disappear automatically after a certain time.
 The variable is created in the settings.py file and as a result, can have an impact on all pages and participants, regardless of the app.
 This variable can then be individually configured when creating a session.
 
@@ -151,7 +152,7 @@ To check whether the given conditions have been met, we need to obtain the date 
 
 Activate the WaitPage
 ______________________________
-We can now combine 'datetime' and session config variables in our init.py file to make our WaitPage dependent on them.
+We can now combine 'datetime' and session config variables in our init.py file to make displaying a  WaitPage dependent on them.
 
 The session config variables can be retrieved via this Python code:
 
@@ -209,7 +210,7 @@ The second part is to check if the time and date of the participant has exceeded
 timer to refresh the site
 __________________________
 
-You can insert a timer in the HTML file of the waiting page to reload the page in a specified amount of time.
+You can insert a timer in the HTML template of the waiting page to reload the page in a specified amount of time.
 
 .. code-block:: console
 

@@ -23,8 +23,7 @@ The basic structure of the if function is as follows:
     if condition:
         # code to execute if condition is true
 
-As an example, let's consider the decision of gender.
-If a person has made a choice, the text must be changed in several places based on that choice.
+As an example, a participants answer to a survey item on their gender can be used to change text in several places based on that choice.
 
 .. code-block:: console
 

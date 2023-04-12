@@ -1,9 +1,8 @@
 ======================
 Add Pictures
 ======================
-In oTree you can add images via HTML.
-It is recommended to optimize the images for the website.
-This means to use any software to keep the quality moderately good but to reduce the size of the images a lot.
+In oTree you can add images in the HTML templates.
+It is recommended to optimize the images for online use to reduce server load and page's loading times
 
 _static Folder
 ======================
@@ -11,8 +10,6 @@ Definition:
  The "static" folder in an oTree app serves as a storage location for static files such as images, stylesheets, and JavaScript files that are used in the application.
  These files are served by the web server without any modification and can be shared by multiple pages within the application.
  By using a static folder, you can separate your static assets from your application code, making it easier to maintain and update your application.
-
-To use the _static Folder, you need to open the project on your computer and add the file there.
 
 Add the picture to a Page
 =============================

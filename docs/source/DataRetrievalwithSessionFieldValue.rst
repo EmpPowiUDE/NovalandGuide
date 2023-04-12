@@ -2,8 +2,8 @@
 Data Retrieval with Session Field variables
 ============================================
 
-Novaland is a study where it is important that the decisions of all participants are taken into account and can be incorporated.
-Therefore, we need variables in the project that can be edited and accessed by all participants. This is where session field variables come into play, as they can be accessed by all participants across all apps.
+Novaland is a study where it is important that the decisions of all participants are taken into account and can be aggregated.
+Therefore, we need variables in the project that can be updated by each participants behavior. This is where session field variables come into play, as they can be accessed by all participants across all apps.
 
 The usage of SESSION_FIELDS has already been explained in #otreeProject.
 In this chapter, we will show how all participants can edit certain variables so that other parts of the project can be modified accordingly.
@@ -15,7 +15,7 @@ In this chapter, we discuss the example of a fire in Novaland that has affected 
 Participants can now donate money to help those affected.
 The total amount of money donated will be stored in a variable and divided by the number of affected individuals.
 
-To determine the number of affected individuals, we use an if function to ask each participant whether they are listed in the CSV file as being affected or not. If they are affected, we use a try and except function to test whether the variable has already been queried in the session fields.
+To determine the number of affected individuals, we use an if function to check for each participant whether they are listed in the CSV file as being affected or not. If they are affected, we use a try and except function to test whether the variable has already been queried in the session fields.
 This is important because the session field variable may not be defined and attempting to access it can cause an error.
 If the variable is undefined, we set it to 1, and if it is defined, we increment the value by 1.
 We also refer to participants who were not affected by the fire as "unaffected" in the data.
@@ -34,7 +34,7 @@ We also refer to participants who were not affected by the fire as "unaffected" 
             if player.participant.CSVFireAffected == 0:
                 player.participant.FireAffected = "Nein"
 
-Each time a fire affected participant has now arrived at this point from the app, the value increases by 1.
+Each time a fire affected participant has now arrived at this point of the app, the value increases by 1.
 
 Donation
 ___________________

@@ -17,7 +17,7 @@ This allows you to have all the built-in form fields filled out by the participa
 
 Costumized Button
 =====================
-Customized buttons are essential in creating a personalized and engaging user experience for participants in an oTree app. Unlike a standard "Next" button, a customized button can perform a variety of functions depending on the app's requirements.
+Customized buttons are essential in creating a personalized user experience for participants in an oTree app. Unlike a standard "Next" button, a customized button can perform a variety of functions depending on the app's requirements.
 
 HTML Button Overview
 =====================

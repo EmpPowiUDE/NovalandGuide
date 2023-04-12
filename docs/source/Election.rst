@@ -1,8 +1,8 @@
 ======================
 Election
 ======================
-Elections in Novaland play a significant role as they have an impact on the income of participating individuals.
-Throughout Novaland, parties are introduced and each participating person can choose a party.
+Elections in Novaland play a significant role as they have an impact on the income of participants.
+In Novaland, parties are introduced and each participating person can choose a party to vote for.
 In this chapter, we will discuss all the elements that deal with the elections.
 
 Introduce Parties
@@ -127,7 +127,7 @@ If you have understood everything in the above code, you can skip this subsectio
 Radio Buttons
 ___________________________
 To allow participants to choose between the parties, we create radio buttons that can be clicked by the participants.
-These buttons contain the names of the parties to choose from
+These buttons contain the names of the parties to choose from.
 
 .. code-block:: console
 

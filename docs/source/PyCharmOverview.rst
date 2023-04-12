@@ -11,7 +11,7 @@ This will serve as a foundation for later explanations in the guide.
 This area is usually located in the middle of the PyCharm interface and contains the code editor where you can write, debug, and test your Python code.
 You can also use various tools such as the debugger, profiler, and unit test runner.
 
-2. Das Projekt-Fenster:
+2. The Project Window:
 ============================
 This area is usually located on the left side of the PyCharm interface and displays the current project along with its folder structure.
 Here you can open files, create or delete folders, and perform other actions related to your project.
@@ -28,7 +28,7 @@ For example, you can execute commands to install packages or start your Python s
 
 Problems:
 ___________________
-This area is usually located at the top of the PyCharm interface and displays all errors and warnings that occurred during the build or test process.
+This area is usually located at the bottom of the PyCharm interface and displays all errors and warnings that occurred during the build or test process.
 Here you can quickly click on problems and navigate directly to the corresponding location in the code.
 
 Python Packages:

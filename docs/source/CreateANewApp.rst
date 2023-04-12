@@ -32,5 +32,5 @@ Replace "app_name" with the name you want to give your app.
 3. Enter a brief description of the app when prompted.
 4. Upon completion, a new folder with your app's name will be created, containing the necessary files to build an app.
 5. You can now modify the files in your newly created app folder and make the necessary changes to add the desired functionality.
-6. To display the app to participants, you need to add it to the settings.py file. Go to 'SESSION_CONFIGS' and add the app under the app_sequence. The exact name and order are important.
+6. To display the app in the admin panel, you need to add it to the settings.py file. Go to 'SESSION_CONFIGS' and add the app under the app_sequence. The exact name and order are important.
 7. Save the changes and restart the oTree server. Your new app should now be available in your project.

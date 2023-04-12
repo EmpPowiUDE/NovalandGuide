@@ -2,16 +2,16 @@
 Randomise Values for the participant
 =====================================
 There are several ways to randomize numbers and inputs.
-In Novaland, we have used the tactic of creating a table and determining the values that have an impact on the game beforehand.
-This way, we prevent too many similar results from occurring.
+In Novaland, we use a pre-defined table with randomized values that determine treatments.
+This way, we prevent errors that may occur due to randomization during the experiment.
 
 Create a CSV Data
 ____________________________________
 
 We use the CSV format for inputting and outputting data from the program.
-There are many different tools that can be used to create CSV data, including Excel, for example.
+There are many different tools that can be used to create CSV files, including Excel, for example.
 
-Here is an example of a CSV data:
+Here is an example of data in a CSV file:
 
 .. code-block:: console
 
@@ -22,7 +22,7 @@ Here is an example of a CSV data:
     3,1,0,0,0
     ...
 
-For example, a CSV data may contain fields such as ID, Income, Corruption, Jobless, and Fireaffected, where the first row contains the names of the fields, and the subsequent rows contain the data values.
+For example, a CSV file may contain fields such as ID, Income, Corruption, Jobless, and Fireaffected, where the first row contains the names of the fields, and the subsequent rows contain the data values.
 This type of document can be created with a simple text editor, but it's important to save the document with the ".csv" extension to ensure that it is properly recognized as a CSV file.
 
 .. raw:: html
@@ -37,12 +37,12 @@ For more informations about CSV:
 .. toctree::
     CSV
 
-Import a CSV data
+Import a CSV file
 _______________________
 
 Now you can place the CSV file in the Novaland folder and use it from there.
 
-When you open a CSV file in PyCharm, it provides you with a preview of the file's contents, allowing you to verify the ordering of the data and check for any errors you may have made.
+When you open a CSV file in PyCharm, it provides you with a preview of the file's contents, allowing you to verify the data and check for any errors you may have made.
 
 .. image:: docs/source/_static/CSV_Data.PNG
 
@@ -89,9 +89,8 @@ Explanation about the Example Code:
 
 The 'open' function is used to access a file called 'participants_data.csv'.
 It has two parts: the first part is the name of the file, and the second part is how the file should be opened.
-The 'encoding' parameter tells the computer which characters are used in the file.
+The 'encoding' parameter tells Python which character encoding is used in the file.
 In this case, 'utf-8-sig' is used, which is a way of encoding that includes a special marker at the beginning of the file.
-This marker tells the computer which way the data is arranged in the file and helps some programs figure out what kind of text it is.
 
 Once the file is opened, the returned file object is assigned to the variable 'f'. The file object can then be used to read data from the file using various methods.
 

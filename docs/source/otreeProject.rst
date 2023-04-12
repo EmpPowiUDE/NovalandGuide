@@ -12,9 +12,9 @@ An oTree project consists of several components, including:
 
     This file contains various configuration settings for the oTree project, including the PARTICIPANT_FIELDS and SESSION_CONFIGS.
 
-    **Applications**
+    **Apps**
 
-    Applications are the individual components of an oTree project that define the different parts of the experiment. Each application has its own set of models, views, and templates.
+    Apps are the individual components of an oTree project that define the different parts of the experiment. Each application has its own set of models, views, and templates.
 
     **Models**
 
@@ -79,7 +79,6 @@ _____________________
 Each session is composed of one or more subsessions, which represent the behavior of a group of players in a single round of the game.
 The subsession is responsible for creating the groups of players and setting the rules for how they interact with each other.
 By breaking the session into subsessions, the experiment can be designed to allow for different treatments or conditions to be randomized across groups and rounds.
-This can help to improve the validity and reliability of the results.
 
 .. image:: docs/source/_static/Overview_1_vers2.png
   :width: 400
@@ -128,7 +127,7 @@ It can be used to track information that is specific to the group as a whole, su
 
 Player
 ______________________
-This class represents an individual player within a group in a single round of the game.
+This class represents an individual participant within a group in a single round of the game.
 It can be used to track information that is specific to the player, such as their decisions or their earnings.
 
 Fields
@@ -275,7 +274,7 @@ Here's an example of how you might use this function:
 
 PARTICIPANT_FIELDS
 _______________________
-Is a list of fields that you can use to store information about each participant in your experiment.
+Participant fields can be used to store information about each participant in your experiment.
 Each field is defined as a tuple, with the first element being the field name, and the second element being the field type.
 
 The main difference with formfields is that Player variables can be used across the entire oTree project, not just within individual apps.
@@ -283,7 +282,7 @@ These fields store information about a single participant that can be used to pe
 
 Example:
 We create a variable in Settings.py that can be used for a participant for the whole project.
-This data is stored there and therefore can be replayed in other apps.
+This data is stored as a participant field and therefore can be accessed from other apps.
 
 Create participant value
 
@@ -318,13 +317,13 @@ These values can be accessed using the same syntax throughout the experiment and
 
 SESSION_FIELDS
 __________________
-Is a list of fields that you can use to store information about each session in your experiment.
+Session fields can be used to store information about each session in your experiment.
 Each field is defined as a tuple, with the first element being the field name, and the second element being the field type.
 
-The information stored in these fields can then be used in the oTree app to determine which treatments or conditions a participant will experience in a particular session, or to gather data for analysis.
+The information stored in these fields can then be used in the oTree app to determine which treatments a particular session receives, or to save aggregate session data.
 This allows you to centralize important information that will be referenced and utilized throughout the experiment, providing a unified and consistent source of data for all components of the project.
 
-This field was used in Novaland mainly to get information from all participants and store them all in one variable.
+This field was used in Novaland mainly to aggregate information from all participants and store them all in one variable.
 
 
 Example:
@@ -389,7 +388,8 @@ The password can be set in the settings.py file of the oTree project, and should
 
     ADMIN_PASSWORT = 'your_password_here'
 
-To make the password even more secure, add 'environ.get'.
+If you host your experiment remotely, you should not store your password in the code.
+Instead, use 'environ.get'.
 By using "environ.get", the project reads the password value from the Heroku environment variables.
 This approach provides an added layer of security as the password is not hardcoded into the code and is not publicly visible.
 The password is stored as an environment variable named "OTREE_ADMIN_PASSWORD".

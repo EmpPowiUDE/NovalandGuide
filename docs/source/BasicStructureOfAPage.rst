@@ -3,14 +3,12 @@
 ============================
 Basic structure of the page
 ============================
-A page in oTree consists of many different programming languages and functions of oTree, which converge and can be used there.
-The basic scheme of the already existing pages in Novaland looks like this in the front-end:
+The basic scheme of the already existing pages in Novaland looks like this:
 
 Django
 =====================
-The basic programming language, which is necessary to work with all other languages, is Django.
-It is based on the programming language 'Python' and is a web framework that is used to create dynamic pages, web applications or web services.
-For Novaland we basically need the functions to create a "block" in which we can work with the other languages.
+The web framework used by oTree is Django.
+For Novaland we basically need the functions to create a "block" in which we can receive and send data to the backend python code.
 A Django code always follows this structure {% code %}.
 Therefore we need a block start and a block end and they are written like this:
 
@@ -23,7 +21,6 @@ Therefore we need a block start and a block end and they are written like this:
 
 The visual representation of the page
 =====================================
-Visual representation of the page:
 In order for the newly created page to adapt to the style of the already existing pages, you must link the already prescribed 'stylesheet'. This is based on a CSS written code, which is integrated in the project under the "_static" folder.
 Therefore, in the first step you need to access the Statics folder via Django.
 
@@ -53,7 +50,7 @@ Here is a template to apply to the HTML site:
 
 Add text
 =====================
-If you want to write a text on your page, it must be in a block, as already described above in the chapter 'Django'.
+If you want to write a text on your page, it must be in a block.
 A page always consists of a title and the content.
 
 Title

@@ -15,7 +15,7 @@ The data can be in any format, such as a string, integer, list, or dictionary.
 
 
 We are creating a scenario in which a query is made on an HTML page and it is transmitted live to the init.py page.
-However, the init.py page immediately sends a signal back so that the page can continue, for example.
+When the data is received, the code in init.py sends a signal back so that the participant can continue to the next page.
 
 HTML:
 
@@ -92,7 +92,7 @@ In this example, the function checks if the type key in the data object is equal
 If the condition is true, the function calls the submit() method of the HTML form element with the ID "form".
 This causes the browser to submit the form and move to the next page of the experiment.
 
-To define the data that needs to be sent, it is already defined in the live_method in the init.py file.
+The data to be sent, is already defined in the live_method in the init.py file.
 If we want to send data based on the example above, we can write the information in the live_method in the init.py file.
 
 Here's an example:
