@@ -7,7 +7,7 @@ In this chapter, we will discuss all the elements that deal with the elections.
 
 Introduce Parties
 ==========================
-To introduce the parties, it is sufficient to show a text with the corresponding image on the page to the participating individuals.
+To introduce the parties, we show a text on the party with the corresponding party logo to the participants.
 Columns are used to ensure that the text is displayed next to the image.
 These columns can be modified in terms of style using CSS code on the page or in the stylesheet.
 The following CSS code can be used to style the columns:
@@ -64,7 +64,7 @@ With this CSS code, the text can be placed in one column and the image in the ot
 
 Basic code for selecting a political party.
 ===========================================
-To select a political party as a participant, once all the parties have been introduced, we provide an overview of all the parties using Rows, which display the parties in a 2 x 2 grid. If you require more or fewer parties, this can be customized accordingly.
+To select a political party as a participant, once all the parties have been introduced, we provide an overview of all the parties using rows, which display the parties in a 2 x 2 grid. If you require more or fewer parties, this can be customized accordingly.
 To create a user-friendly interface, we add a radio button to each image. When you click on the image, the corresponding radio button is selected.
 The following code creates an HTML page with four images of party logos and radio buttons for selecting a party. The images are arranged in two rows with two columns each, with each column containing a logo and an associated radio button.
 
@@ -218,22 +218,36 @@ These variables can now be saved.
 
 Visual representation
 =========================
-In order to present the results we have decided to use different options.
+In order to present the results we have decided to use a diagram and dynamic text.
+
+Dynamic Text
+____________________________
+
+Using the election results, various dynamic texts can be displayed based only on the final outcome.
+To achieve this, if functions can be easily used.
+
+.. code-block:: console
+
+    HTML Example:
+    {% if Party1Percent > 10 %}
+    Party 1 has reached more than 10 percent
+    {% endif %}
+
+    Python Example:
+    if Party1Votes + Party2Votes > Party3Votes + Party4Votes:
+        Party1andParty2 = "Party1 and Party2 have more votes"
 
 Diagram
 _________________
 
-This diagram serves as a guideline for the participants on how decisions were made in Novaland. Such a diagram can be designed using CSS.
-Here we provide an example of such a diagram.
+[@Raphael: Was sind skills? Kannst Du das bitte noch erklären?]
+This diagram shows participants the result of the election in Novaland.
 
-It is a larger diagram that will be commented on separately and explanations will follow.
-The main focus is to understand how to work with it.
-
-In essence, this code defines a layout consisting of a box containing four skills represented by bar graphs with percentage values.
+The code below defines a layout consisting of a box containing four bars representing the vote share of each party.
 The four skills are Party1, Party2, Party 3, and Party4. Each bar has a name centered below it.
 
 The box is relatively positioned and horizontally and vertically centered.
-The skills are arranged using flexbox, so they are evenly distributed across the available space.
+The skills are arranged using flexbox, so that they are evenly distributed across the available space.
 
 The bar graphs are styled using the .graph selector.
 Each bar graph has an absolute positioning command and a percentage value that specifies the height of the bar. The bars also have a background color and a foreground color created by a linear gradient.
@@ -345,7 +359,7 @@ Use the CSS in HTML Area to define the diagram:
         <div class="box">
 
             # Party 1
-            <div class="skill"> # The individual skills are defined here as bars
+            <div class="skill"> # The individual skills are shown here as bars
                 <div class="graph" style="height:{%Party1Percent%}%">   # This area defines the size of the bar based on the percentage
                     <div class="percent"> {% Party1Percent %}%</div>    # The visual representation of the percentage
                 </div>
@@ -363,21 +377,3 @@ Use the CSS in HTML Area to define the diagram:
             # Party 3 & 4 uses the same schema
             ...
     </section>
-
-
-Dynamic Text
-____________________________
-
-Now, using the results, various dynamic texts can be displayed based only on the final outcome.
-To achieve this, if functions can be easily used.
-
-.. code-block:: console
-
-    HTML Example:
-    {% if Party1Percent > 10 %}
-    Party 1 has reached more than 10 percent
-    {% endif %}
-
-    Python Example:
-    if Party1Votes + Party2Votes > Party3Votes + Party4Votes:
-        Party1andParty2 = "Party1 and Party2 have more votes"

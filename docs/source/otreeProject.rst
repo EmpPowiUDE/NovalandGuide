@@ -270,7 +270,8 @@ Here's an example of how you might use this function:
 
     app_sequence:['App_Name_1', 'App_Name_2', ...]
 
-
+[@Raphael: Bitte hier noch einen neuen Absatz zur Room config schreiben, etwa:
+For your data collection you will need a room in which participants will take part ... . ]
 
 PARTICIPANT_FIELDS
 _______________________

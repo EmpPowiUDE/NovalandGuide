@@ -1,7 +1,7 @@
 ======================
 CSV
 ======================
-
+[@Raphael: Kannst Du die Seite bitte aus der Abfolge der Seiten, wenn man auf "Next" klickt,  nehmen?]
 When creating a CSV file, there are several things to keep in mind:
     1. Delimiter: CSV stands for "comma-separated values," so the values in each row should be separated by commas. However, depending on your locale or data formatting needs, you may need to use a different delimiter, such as a semicolon or tab.
     2. Header row: It's a good practice to include a header row at the top of your CSV file that describes the contents of each column.

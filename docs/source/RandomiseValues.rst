@@ -3,7 +3,7 @@ Randomise Values for the participant
 =====================================
 There are several ways to randomise treatments in oTree.
 In Novaland, we use a pre-defined table with randomised values that determine treatments.
-This way, we prevent errors that may occur due to randomization during the experiment.
+This way, we prevent errors that may occur due to randomisation during the experiment.
 
 Create a CSV Data
 ____________________________________
@@ -48,7 +48,7 @@ When you open a CSV file in PyCharm, it provides you with a preview of the file'
 
 
 To be able to use the individual values in your project, we will write some code in the init.py file, in which the program reads the values and assigns them to each participant.
-First, we need to install the CSV library:
+First, we need to import the CSV library:
 
 .. code-block:: console
 

@@ -2,11 +2,9 @@
 Individual settings for the session:
 =====================================
 
-To be able to make individual settings, these must already be defined in the Settings.py file in PyCharm.
+The general session configuration can be set in the SESSION_CONFIGS in the settings.py file in the root directory of your Novaland project.
 
-To start a session, you can go to the Session Settings section.
-There, you can make settings that are either predefined by oTree or that you can determine yourself in the settings.py file under SESSION_CONFIGS. Under the 'dict' section, you can define individual variables.
-In the example code provided, SESSION_CONFIGS is a list of dictionaries, with each dictionary containing key-value pairs representing settings for a particular session configuration.
+SESSION_CONFIGS is a list of dictionaries, with each dictionary containing key-value pairs representing settings for a particular session configuration.
 
 .. code-block:: console
 
@@ -14,7 +12,7 @@ In the example code provided, SESSION_CONFIGS is a list of dictionaries, with ea
         dict()
     ]
 
-To define your own variables that can affect the study, you need to open the settings.py file and enter your values under SESSION_CONFIGS.
+To define your own variables, you need to enter your values under SESSION_CONFIGS.
 These values can then be changed when starting the app on Heroku under the Session Settings.
 
 .. code-block:: console
@@ -42,8 +40,8 @@ In this case, the 'is_displayed' function could look like:
 Individual Novaland Settings
 _______________________________
 Novaland's functionality is dependent on specific dates and times, as different phases occur at predetermined times.
-To ensure that these phases are not released until the designated date and time, we define our variables in settings.py to suit our needs.
-These variables can be adjusted again when opening the app on Heroku.
+To ensure that these phases are not accessible until the designated date and time, we define start times in settings.py.
+These variables can be changed when starting a session via the admin panel-
 
 An example might be:
 
@@ -65,19 +63,19 @@ An example might be:
         )
     ]
 
-This information can be used to display different pages and phases for the participants.
-To display a waiting page when the date and time have not yet been reached, or to make it disappear when the conditions have been met, we define a page with an "is_displayed" function.
+This information can be used to display different pages and phases for the participants at certain times.
+To display a waiting page when the date and time have not yet been reached,
+or to make it disappear when the conditions have been met, we define a page with an "is_displayed" function.
 We also need to use the "datetime" function.
 
-To call the SESSION_CONFIGS variables, we use the names that we defined in the dictionary within SESSION_CONFIGS.
-They are called like this:
+SESSION_CONFIGS variables are called like this:
 
 .. code-block:: console
 
     player.session.config['SessionConfigDictVariableName']
 
 
-Based on this, we can write the "if" conditions for the "is_displayed" function:
+Based on this, we wrote the "if" conditions for the "is_displayed" function:
 
 
 .. code-block:: console
@@ -93,6 +91,6 @@ Based on this, we can write the "if" conditions for the "is_displayed" function:
         else:
             return False
 
-    The method checks the "waitingPagePhase1" parameter in the session configuration and compares the current datetime with the date and time specified in the "timeWaitingPagePhase1" and "dateNovaland" parameters.
-    If the "waitingPagePhase1" parameter is True and the current datetime is before the specified datetime, the method returns True, indicating that the waiting page should be displayed.
-    Otherwise, the method returns False and the page is not displayed.
+The method checks the "waitingPagePhase1" parameter in the session configuration and compares the current datetime with the date and time specified in the "timeWaitingPagePhase1" and "dateNovaland" parameters.
+If the "waitingPagePhase1" parameter is True and the current datetime is before the specified datetime, the method returns True, indicating that the waiting page should be displayed.
+Otherwise, the method returns False and the page is not displayed.

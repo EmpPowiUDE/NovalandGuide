@@ -1,23 +1,22 @@
 ======================
 Data Collection
 ======================
-Novaland enables the collection of diverse participant behavior data through an online process.
-Just follow a few steps to gather the information.
+Novaland enables the online data collection of participant behavioral data.
 
 Upload your project on Heroku
 ================================
-The goal is to deliver the new version of Novaland on the existing server.
-The Project is already available on the Heroku Server.
+The goal is to deliver Novaland to participants, in this case via Heroku.
 
 oTree Hub
 ==================================
-There are several ways to upload the project to Heroku. The easiest way is to use "oTreeHub".
-oTreehub is a project management tool aimed at simplifying and speeding up the development process of oTree-based studies.
+There are several ways to upload the project to Heroku. The easiest way is to use "oTree Hub".
+[@Raphael: Hier bitte schon oTree Hub mit dem Text verlinken]
+oTree Hub is a tool aimed at simplifying the development and deployment process of oTree-based studies.
 
-If you don't have a Heroku account or your account is not connected to otreeHub.
-Then this must be done before you can upload your project to Heroku using oTreehub.
+If you don't have a Heroku account or your account is not connected to oTree Hub.
+Then this must be done before you can upload your project to Heroku using oTree Hub.
 
-Upload your project on oTreeHub:
+Upload your project on oTree Hub:
 ________________________________
 
     1. Open your project in PyCharm.
@@ -27,7 +26,7 @@ ________________________________
 
         otree zip
 
-    3. PyCharm generates an oTree.zip file for you, located at the project's location.
+    3. PyCharm generates an .otreezip file for you, located in the project's root folder.
 
     4. Open your browser and go to this page:
 
@@ -35,51 +34,79 @@ ________________________________
 
         www.otreehub.com
 
-    5. Login or create an account on oTreehub.
+    5. Login or create an account on oTree Hub.
 
     6. Click on "Heroku" in the menu.
-    7. Select your project and press the 'Deploy' Button.
-    8. Upload your oTree.zip file on the 'Upload code to Heroku' section.
+    7. (Only on first deploy:) Link your account on oTree Hub with your account on Heroku.
+    8. Select your project and press the 'Deploy' Button.
+    9. Upload your .otreezip file on the 'Upload code to Heroku' section.
+    10. Follow the link shown on oTree Hub to access your Novaland instance.
 
-    The Project is now Online in your Heroku account.
+Change the configuration of your project on oTree Hub:
+________________________________
 
-Data collection on Heroku
+You need to set up a few more things before the data collection can take place.
+In the overview of the project on oTree Hub, select "Configure" in the row with the site you have deployed your Novaland version to.
+On the next page:
+    - Set Postgres to standard-0
+    - Set OTREE_production to On
+    - Set OTREE_AUTH_LEVEL to STUDY
+    - Set Dyno size to Standard-2X
+    - Enable Papertrail and Sentry
+You may have to wait a few minutes for your changes to take effect.
+You can check whether everything is set up correctly in the admin panel of your Novaland site under "Server Check" every box should now be green.
+
+Before the data collection
 =========================
 
 Create a new session
 ________________________
-To get an overview of the functions of Heroku, you can open the chapter 'Heroku'.
+[@Raphael: Kannst Du das bitte noch schöner formatieren? Ich habe das nicht hingekriegt]
+There are several ways to create a session.
+Each can be accessed from the admin panel of your Novaland site.
+You will have to log in to the admin panel with the credentials you provided in settings.py.
 
-    1. Open your browser and go to:
+Via "Demo"
 
-    .. code-block:: console
+This session setup is not suitable for conducting a data collection, but is well suited to test your Novaland version.
+Click on Demo and select the Session config which contains all the apps of your Novaland version.
 
-        www.heroku.com
+Via "Sessions"
 
-    2. Create an account or login to your account.
-    3. The first site that you can see is a overview about your projects.
-    4. Select your Novaland Project.
+This is not ideal to conduct data collections, because the session URL changes each time you create a new session.
+Therefore it is not possible to send participants the links well in advance.
+However, it is well suited if e.g. you want to test your Novaland version with a larger group.
+
+1. Click "Sessions" --> Create new session
+2. Select the Session config which contains all the apps of your Novaland version.
+3. Choose a number of participants suitable for your test run. It is often a good idea to choose about 1.5 times the amount of people you expect to take part, because after a session is initialised, you can not raise the number of participants anymore.
+4. Configure your session with the waiting pages and starting / end times you intend to use (see Wait Pages for more info).
+5. Click "Create".
+
+Via "Rooms"
+
+This is the way to go for data collections, because you can send participants individualised access tokens well in advance of your data collection
+
+1. Click Rooms anc select the room you want to use.
+2. Select the Session config which contains all the apps of your Novaland version.
+3. Choose a number of participants suitable for your test run. It is often a good idea to choose about 1.5 times the amount of people you expect to take part, because after a session is initialised, you can not raise the number of participants anymore.
+4. Configure your session with the waiting pages and starting / end times you intend to use (see Wait Pages for more info).
+5. Click "Create".
 
 
-Different sessions can be created via the Session window.
-These sessions are separated from each other.
-Various settings can be made, such as the number of participants.
-Individual settings defined in the settings.py file also play a role in this, and they can be further modified in the session settings.
+After you have set up your room, you can invite participants e.g.
+via E-Mail or any other way of contact with the participant labels shown under "Participant-specific URLs".
 
-Sending Links to the participant
-______________________________________
-A session generates links for participants that can be sent to them.
-When the participants open the link, they can participate in the project or study.
-- Jakob Explanation needed about sending the links to the participants -
-
-Monitoring the session
+During the data collection
 =======================
 
-When you are inside the session, you can view various features that allow you to observe the activities of participants.
+During the session, you can view various features that allow you to observe the activities of participants.
 These are displayed at the top of the session, and below are listed some of the key functions:
 
 Monitor
 _________________
+[@Raphael: Bitte hier korrigieren: Im Monitor Panel in oTree sieht man nichts von Dyno-Load etc.. Bitte einen Absatz
+zu Monitoring bei Heroku zu Last etc. und einen zum Monitoring auf der Novaland-Seite vom Fortschritt der participants erstellen.]
 The 'Monitor' window displays real-time metrics such as the number of dynos running, the amount of CPU and memory being used, and the number of requests being processed.
 It also provides alerts if there are any issues or errors with your application.
 
@@ -109,3 +136,7 @@ This window provides access to CSV files containing all the collected informatio
 You can download data from all apps at once or select specific apps to download data from.
 
 At the bottom of the window, there is also a download button for all page times, which enables you to see how long a participant spent on each page.
+
+[@Raphael: Kannst Du das bitte auch schöner formatieren?]
+To protect your participants data, you should, after you have downloaded all data and created additional backups,
+reset your database via oTree Hub --> Heroku --> Your Novaland Site --> Deploy --> Reset database.
