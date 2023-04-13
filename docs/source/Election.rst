@@ -77,7 +77,7 @@ Election HTML Code:
     <div class="row">
         <div class="column3">       # First Party
             <img src="{% static 'Party1PNG' %}" width="30%" class="center" onclick="Party1()">      # Party Image 'Party1PNG' from the static folder + 'onclick' function 'Party1()'
-            <p class="p" style="text-align: center"> <input type="radio" id="election1" name="Party" value="Party 1"> Party 1 </p>      # Radio button with the id'election1', the name 'Party and the value 'Party 1'
+            <p class="p" style="text-align: center"> <input type="radio" id="election1" name="Party" value="Party 1"> Party 1 </p>      # Radio button with the id 'election1', the name 'Party and the value 'Party 1'
         </div>
 
         <div class="column3">

@@ -78,7 +78,7 @@ Subsession
 _____________________
 Each session is composed of one or more subsessions, which represent the behavior of a group of players in a single round of the game.
 The subsession is responsible for creating the groups of players and setting the rules for how they interact with each other.
-By breaking the session into subsessions, the experiment can be designed to allow for different treatments or conditions to be randomized across groups and rounds.
+By breaking the session into subsessions, the experiment can be designed to allow for different treatments or conditions to be randomised across groups and rounds.
 
 .. image:: docs/source/_static/Overview_1_vers2.png
   :width: 400
@@ -201,7 +201,7 @@ This defines a StringField with two available choices represented by the strings
 The label argument provides the text displayed next to the input field on the participant's page."
 
 
-Settingy.py file
+Settings.py file
 ==============================
 The settings.py file in an oTree project contains various configuration settings and parameters for your oTree experiment or application.
 These settings control various aspects of your experiment such as the number of rounds, the number of participants per group, the name of the application, the language to be used, and other settings related to the behavior and appearance of your experiment.

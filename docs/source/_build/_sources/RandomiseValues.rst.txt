@@ -1,7 +1,7 @@
 =====================================
 Randomise Values for the participant
 =====================================
-There are several ways to randomize numbers and inputs.
+There are several ways to randomise numbers and inputs.
 In Novaland, we have used the tactic of creating a table and determining the values that have an impact on the game beforehand.
 This way, we prevent too many similar results from occurring.
 

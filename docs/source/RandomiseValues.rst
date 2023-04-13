@@ -1,8 +1,8 @@
 =====================================
 Randomise Values for the participant
 =====================================
-There are several ways to randomize numbers and inputs.
-In Novaland, we use a pre-defined table with randomized values that determine treatments.
+There are several ways to randomise treatments in oTree.
+In Novaland, we use a pre-defined table with randomised values that determine treatments.
 This way, we prevent errors that may occur due to randomization during the experiment.
 
 Create a CSV Data
@@ -32,7 +32,7 @@ This type of document can be created with a simple text editor, but it's importa
 .. image:: docs/source/_static/CSVEXAMPLE.PNG
     :width: 400
 
-For more informations about CSV:
+For more information about CSV files:
 
 .. toctree::
     CSV

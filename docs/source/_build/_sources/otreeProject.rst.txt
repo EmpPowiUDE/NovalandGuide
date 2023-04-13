@@ -78,7 +78,7 @@ Subsession
 _____________________
 Each session is composed of one or more subsessions, which represent the behavior of a group of players in a single round of the game.
 The subsession is responsible for creating the groups of players and setting the rules for how they interact with each other.
-By breaking the session into subsessions, the experiment can be designed to allow for different treatments or conditions to be randomized across groups and rounds.
+By breaking the session into subsessions, the experiment can be designed to allow for different treatments or conditions to be randomised across groups and rounds.
 This can help to improve the validity and reliability of the results.
 
 .. image:: docs/source/_static/Overview_1_vers2.png

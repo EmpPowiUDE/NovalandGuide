@@ -33,7 +33,7 @@ In this case, the 'is_displayed' function could look like:
     class PageName(Page):
         @staticmethod
         def is_displayed(player: Player):
-            if player.session.config['Page1Visble'] == True:
+            if player.session.config['Page1Visible'] == True:
                 return True
             else:
                 return False
@@ -55,11 +55,11 @@ An example might be:
             display_name='phase_1',
             app_sequence=['phase_1'],
             waitingPagePhase1=False,        # Activates/Deactivates the waiting page for the first Phase
-            timeWaitingPagePhase1='1900',   # Determined when to see the first phase of the app for the pariticipants
+            timeWaitingPagePhase1='1900',   # Determined when to see the first phase of the app for the participants
             waitingPagePhase4=False,        # Activates/Deactivates the waiting page for the second Phase
-            timeWaitingPagePhase4='1930',   # Determined when to see the second phase of the app for the pariticipants
+            timeWaitingPagePhase4='1930',   # Determined when to see the second phase of the app for the participants
             waitingPagePhase5=False,        # Activates/Deactivates the waiting page for the third Phase
-            timeWaitingPagePhase5='1940',   # Determined when to see the third phase of the app for the pariticipants
+            timeWaitingPagePhase5='1940',   # Determined when to see the third phase of the app for the participants
             dateNovaland='0911',            # Sets the date when Novaland should start
             doc="Time: 'hhmm'; date: 'ddmm"
         )
