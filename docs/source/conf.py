@@ -12,8 +12,8 @@ from Links import *
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
 project = 'NovalandGuide'
-copyright = '2023, University Duisburg'
-author = 'University Duisburg'
+copyright = '2023, University of Duisburg-Essen (UDE)'
+author = 'POLITSOLID project team'
 release = '0.1'
 
 # -- General configuration ---------------------------------------------------
