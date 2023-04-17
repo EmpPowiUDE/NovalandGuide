@@ -4,7 +4,7 @@ Wait Pages
 Wait pages in oTree are pages that help coordinate the timing of an experiment with multiple participants.
 Basically, it makes sure everyone is on the same page and ready to move forward with the next step of the task at the same time.
 
-It is a type of page in oTree that's defined in the app's views.py file.
+It is a type of page in oTree that's defined in the app's init.py file.
 When a participant reaches the wait page, they'll see a message saying they're waiting for other participants to catch up.
 You can change what the wait page looks like and what it says.
 

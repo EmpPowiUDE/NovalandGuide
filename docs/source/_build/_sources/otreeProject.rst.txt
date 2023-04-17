@@ -14,15 +14,15 @@ An oTree project consists of several components, including:
 
     **Applications**
 
-    Applications are the individual components of an oTree project that define the different parts of the experiment. Each application has its own set of models, views, and templates.
+    Applications are the individual components of an oTree project that define the different parts of the experiment. Each application has its own set of models, pages, and templates.
 
     **Models**
 
     Models are Python classes that define the data structure for the application and store the data in a database.
 
-    **Views**
+    **Pages**
 
-    Views define the logic for how data is displayed and processed in the application.
+    Pages define the logic for how data is displayed and processed in the application.
 
     **Templates**
 
@@ -43,7 +43,7 @@ An oTree project consists of several components, including:
 Apps
 ====================
 An oTree app is a component of an oTree project, and represents a single task or game that participants can complete in the experiment.
-An oTree app typically consists of a series of pages, each of which presents a task or question for the participant to answer, as well as models and views that define the behavior and logic of the app.
+An oTree app typically consists of a series of pages, each of which presents a task or question for the participant to answer, as well as models and pages that define the behavior and logic of the app.
 The app may also include custom templates and CSS styles to control the appearance of the pages and elements, as well as custom JavaScript code to handle user interactions and events.
 The structure and behavior of an oTree app is defined using the Python programming language, and the platform provides a set of tools and libraries to make it easy to create and manage the components of the app.
 

@@ -8,6 +8,8 @@ Contents
 -----------------------------------------
 .. toctree::
 
-   PyCharmOverview
-   CreateANewApp
-   otreeProject
+    PyCharmOverview
+    CreateANewApp
+    ShortOtreeProject
+    SavingAndUsingParticipantInputInOtree
+    settings-py
