@@ -2,6 +2,11 @@
 Installation
 ======================
 
+Download Python
+=====================
+First, Python, the programming language we want to work with, needs to be downloaded.
+`Python Download Page <https://www.python.org/downloads/>`_
+
 Development Environment
 =======================
 Feel free to use any preferred development environment.
@@ -64,6 +69,19 @@ You can enable Django support in PyCharm for the Novaland project to e.g. see co
 
     7. Under 'Django project root' select the project on your computer
 
+
+Select Interpreter
+=====================
+To use Python for the project, an interpreter needs to be chosen.
+
+    1. Open 'File'
+    2. Go to settings
+    3. Search 'interpreter'
+    4. Choose the 'Python interpreter' in the project
+    4. Click on 'add interpreter'
+    5. Choose 'Add Local Interpreter'
+    6. Select the appropriate version of Python installed on your system as the interpreter for the project.
+    7. Restart PyCharm
 
 Additional installation
 =========================

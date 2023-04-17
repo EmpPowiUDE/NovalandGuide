@@ -5,6 +5,8 @@ Basic structure of the page
 ============================
 The basic scheme of the already existing pages in Novaland looks like this:
 
+`For more informations <https://otree.readthedocs.io/en/latest/pages.html>`_.
+
 Django
 =====================
 The web framework used by oTree is Django.
@@ -61,8 +63,9 @@ Example:
 
 .. code-block:: console
     :linenos:
-
+    {% block title %}
     <h1 class="h1"> Title Text </h1>
+    {% endblock %}
 
 Content
 ----------------------
@@ -72,7 +75,9 @@ This is written between a 'p' element, i.e. a paragraph or text paragraph elemen
 .. code-block:: console
     :linenos:
 
+    {% block content %}
     <p class="p"> Content Text </p>
+    {% endblock %}
 
 Basic HTML elements for working with text
 -----------------------------------------
@@ -105,7 +110,11 @@ To see an example go to the :ref:`buttons-page` page.
 
 init.py functions
 =====================
-In addition to JavaScript functions that are defined directly on the respective page, there are also functions in the backend that can be assigned to the pages directly in the init.py file.
+The init.py file in oTree allows you to define functions that can be assigned to pages in the backend.
+This means you can define JavaScript functions for the frontend and also define 'vars_for_template' to be used in the HTML templates.
+'vars_for_template' returns a dictionary with variable names as keys and data as values, which can then be accessed and used in the HTML templates using the Django template language.
+
+`For more informations <https://otree.readthedocs.io/en/latest/pages.html>`_.
 
 validate E-Mails
 ---------------------

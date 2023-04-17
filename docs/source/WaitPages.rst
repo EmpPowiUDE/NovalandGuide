@@ -41,11 +41,6 @@ The method returns True if the value of the income attribute of the player is sm
 If the method returns True the page will be displayed.
 If the method returns False the page will not be displayed.
 
-vars_for_template
-_______________________
-Returns a dictionary of variables that will be passed to the wait page's template.
-You can use this function to pass information from the Python code to the HTML template, such as the number of participants that have arrived at the wait page.
-
 more functions
 __________________________
 Visit `this page <https://otree.readthedocs.io/en/latest/multiplayer/waitpages.html>`_ for more Wait Page features.
