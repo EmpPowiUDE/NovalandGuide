@@ -9,12 +9,14 @@ The goal is to deliver Novaland to participants, in this case via Heroku.
 
 oTree Hub
 ==================================
-There are several ways to upload the project to Heroku. The easiest way is to use "oTree Hub".
-[@Raphael: Hier bitte schon oTree Hub mit dem Text verlinken]
+There are several ways to upload the project to Heroku.
+The easiest way is to use `oTree Hub <https://www.otreehub.com>`_.
 oTree Hub is a tool aimed at simplifying the development and deployment process of oTree-based studies.
 
 If you don't have a Heroku account or your account is not connected to oTree Hub.
 Then this must be done before you can upload your project to Heroku using oTree Hub.
+
+.. _data-collection-page:
 
 Upload your project on oTree Hub:
 ________________________________
@@ -60,38 +62,40 @@ Before the data collection
 =========================
 
 Create a new session
-________________________
-[@Raphael: Kannst Du das bitte noch schöner formatieren? Ich habe das nicht hingekriegt]
+=====================
 There are several ways to create a session.
 Each can be accessed from the admin panel of your Novaland site.
 You will have to log in to the admin panel with the credentials you provided in settings.py.
 
 Via "Demo"
+_______________
 
 This session setup is not suitable for conducting a data collection, but is well suited to test your Novaland version.
 Click on Demo and select the Session config which contains all the apps of your Novaland version.
 
 Via "Sessions"
+______________
 
 This is not ideal to conduct data collections, because the session URL changes each time you create a new session.
 Therefore it is not possible to send participants the links well in advance.
 However, it is well suited if e.g. you want to test your Novaland version with a larger group.
 
-1. Click "Sessions" --> Create new session
-2. Select the Session config which contains all the apps of your Novaland version.
-3. Choose a number of participants suitable for your test run. It is often a good idea to choose about 1.5 times the amount of people you expect to take part, because after a session is initialised, you can not raise the number of participants anymore.
-4. Configure your session with the waiting pages and starting / end times you intend to use (see Wait Pages for more info).
-5. Click "Create".
+    1. Click "Sessions" --> Create new session
+    2. Select the Session config which contains all the apps of your Novaland version.
+    3. Choose a number of participants suitable for your test run. It is often a good idea to choose about 1.5 times the amount of people you expect to take part, because after a session is initialised, you can not raise the number of participants anymore.
+    4. Configure your session with the waiting pages and starting / end times you intend to use (see Wait Pages for more info).
+    5. Click "Create".
 
 Via "Rooms"
+_______________
 
 This is the way to go for data collections, because you can send participants individualised access tokens well in advance of your data collection
 
-1. Click Rooms anc select the room you want to use.
-2. Select the Session config which contains all the apps of your Novaland version.
-3. Choose a number of participants suitable for your test run. It is often a good idea to choose about 1.5 times the amount of people you expect to take part, because after a session is initialised, you can not raise the number of participants anymore.
-4. Configure your session with the waiting pages and starting / end times you intend to use (see Wait Pages for more info).
-5. Click "Create".
+    1. Click Rooms anc select the room you want to use.
+    2. Select the Session config which contains all the apps of your Novaland version.
+    3. Choose a number of participants suitable for your test run. It is often a good idea to choose about 1.5 times the amount of people you expect to take part, because after a session is initialised, you can not raise the number of participants anymore.
+    4. Configure your session with the waiting pages and starting / end times you intend to use (see Wait Pages for more info).
+    5. Click "Create".
 
 
 After you have set up your room, you can invite participants e.g.
@@ -137,6 +141,11 @@ You can download data from all apps at once or select specific apps to download 
 
 At the bottom of the window, there is also a download button for all page times, which enables you to see how long a participant spent on each page.
 
-[@Raphael: Kannst Du das bitte auch schöner formatieren?]
 To protect your participants data, you should, after you have downloaded all data and created additional backups,
-reset your database via oTree Hub --> Heroku --> Your Novaland Site --> Deploy --> Reset database.
+reset your database via:
+
+    1. Go to 'oTree Hub'
+    2. Click on 'Heroku' in the menu
+    3. Choose your Novaland Site
+    4. Go to 'Deploy'
+    5. Press 'Reset database'

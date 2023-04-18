@@ -240,7 +240,6 @@ To achieve this, if functions can be easily used.
 Diagram
 _________________
 
-[@Raphael: Was sind skills? Kannst Du das bitte noch erklären?]
 This diagram shows participants the result of the election in Novaland.
 
 The code below defines a layout consisting of a box containing four bars representing the vote share of each party.
@@ -248,6 +247,7 @@ The four skills are Party1, Party2, Party 3, and Party4. Each bar has a name cen
 
 The box is relatively positioned and horizontally and vertically centered.
 The skills are arranged using flexbox, so that they are evenly distributed across the available space.
+In this context, "skills" refers to the four political parties that are being represented in the diagram.
 
 The bar graphs are styled using the .graph selector.
 Each bar graph has an absolute positioning command and a percentage value that specifies the height of the bar. The bars also have a background color and a foreground color created by a linear gradient.

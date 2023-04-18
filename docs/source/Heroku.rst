@@ -1,3 +1,5 @@
+.. _heroku-page:
+
 ======================
 Heroku
 ======================
@@ -10,11 +12,8 @@ Open Heroku:
 
     1. Open your browser and go to `Heroku <https://www.heroku.com>`_
     2. Create an account or login to your account.
-    3. Follow the steps to upload your Novaland project outlined here
-    4. Select your Novaland Project.
-
-[@Raphael: Kannst Du bitte den Abschnitt zu Upload your project aus Data Collection bei
-"Follow the steps to upload your Novaland project outlined here" verlinken?]
+    3. Follow the steps to zip your Novaland project -> :ref:`data-collection-page`
+    4. Select your Novaland Project zip.
 
 Your Project on Heroku
 ======================

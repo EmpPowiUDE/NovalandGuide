@@ -150,7 +150,6 @@ There are different types of fields that can be used in oTree models, such as:
 +----------------------------+--------------------------------+
 | StringField                |      for text strings          |
 +----------------------------+--------------------------------+
-<<<<<<< Updated upstream
 
 
 Saving and Using Participant Input in oTree
@@ -273,8 +272,37 @@ Here's an example of how you might use this function:
 
     app_sequence:['App_Name_1', 'App_Name_2', ...]
 
-[@Raphael: Bitte hier noch einen neuen Absatz zur Room config schreiben, etwa:
-For your data collection you will need a room in which participants will take part ... . ]
+Rooms
+_________
+For your data collection, it's important to have a suitable room configuration in which participants can take part in your study.
+To use this setting, you first need to define the rooms you want to use in your experiment by adding code to your settings.py file.
+
+For example, the following code defines three rooms: "Novaland", "Test_Novaland", and "registration_nl".
+The first room, "Novaland", includes a participant label file and disables secure URLs.
+The second room, "Test_Novaland", has no additional fields. The third room, "registration_nl", includes a display name specific to a registration for the Novaland study.
+
+.. code-block:: console
+
+    ROOMS = [
+    dict(
+        name="Novaland",
+        display_name="Novaland",
+        participant_label_file='_static/Platzhalter.txt',
+        use_secure_urls=False
+    ),
+    dict(
+        name="Test_Novaland",
+        display_name="test_Novaland"
+    ),
+    dict(
+        name="registration_nl",
+        display_name="Registrierung zur Novaland-Studie"
+    ),
+    ]
+
+You can add as many rooms as you need, and customize their fields to suit your experiment's requirements.
+Once you have defined your rooms, you can use them in your session configurations to assign participants to specific rooms, allowing you to balance the number of participants and conditions across each room.
+
 
 PARTICIPANT_FIELDS
 _______________________

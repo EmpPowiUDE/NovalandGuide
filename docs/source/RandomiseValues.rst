@@ -32,10 +32,7 @@ This type of document can be created with a simple text editor, but it's importa
 .. image:: docs/source/_static/CSVEXAMPLE.PNG
     :width: 400
 
-For more information about CSV files:
-
-.. toctree::
-    CSV
+For more information about :ref:`csv-page` files
 
 Import a CSV file
 _______________________
