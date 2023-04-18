@@ -1,3 +1,5 @@
+.. _randomise-values-page:
+
 =====================================
 Randomise Values for the participant
 =====================================
