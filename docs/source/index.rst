@@ -24,6 +24,7 @@ Contents
 
    Novaland
    installation
+   runningNovaland
    ProjectOverview
    Pages
    WorkingWithData
