@@ -76,32 +76,24 @@ settings.py file:
         doc="Time: 'hhmm'; utc = now - 1; date: 'ddmm "
     )
 
-**waitingPageActivated**
+waitingPageActivated:
+This variable activate or deactivate the waitpage.
 
-This is the variable that we will use later in the script to activate the wait pages.
-
-
-**deactivateWaitingPageTime**
-
+deactivateWaitingPageTime:
 This indicates the time at which the wait page should disappear.
 The input reflects the time, where 1830 is equivalent to 6:30 PM.
 
-
-**tooLatePageActivated**
-
+tooLatePageActivated:
 This is a page that appears when a person takes longer than expected.
 It must also be activated for the event to take place.
 
+tooLatePageTime:
+This variable specifies the time threshold at which a page will be displayed, informing the participant that they have exceeded the allotted time.
 
-**tooLatePageTime**
-
-This is the time at which a participant is considered late.
-
-
-**dateNovaland**
-
+dateNovaland:
 This is the date on which the study will take place.
 In our example, '09' represents the day and '11' represents the month.
+Attempting to participate before or after this date will render it impossible for the participant to do so.
 
 
 datetime

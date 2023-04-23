@@ -1,5 +1,5 @@
 ==============================
-Settingy.py file
+Settings.py file
 ==============================
 The settings.py file in an oTree project contains various configuration settings and parameters for your oTree experiment or application.
 These settings control various aspects of your experiment such as the number of rounds, the number of participants per group, the name of the application, the language to be used, and other settings related to the behavior and appearance of your experiment.

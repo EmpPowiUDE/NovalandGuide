@@ -10,3 +10,6 @@ Follow these steps to run the Novaland project on your computer using PyCharm:
     3. Type 'otree devserver' in the terminal.
     4. A link to a local page where you can access your project will appear, typically 'http://localhost:8000/'.
 
+To be able to test the project with multiple participants, the project needs to be uploaded to :ref:`heroku-page`.
+
+

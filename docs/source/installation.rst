@@ -78,10 +78,10 @@ To use Python for the project, an interpreter needs to be chosen.
     2. Go to settings
     3. Search 'interpreter'
     4. Choose the 'Python interpreter' in the project
-    4. Click on 'add interpreter'
-    5. Choose 'Add Local Interpreter'
-    6. Select the appropriate version of Python installed on your system as the interpreter for the project.
-    7. Restart PyCharm
+    5. Click on 'add interpreter'
+    6. Choose 'Add Local Interpreter'
+    7. Select the appropriate version of Python installed on your system as the interpreter for the project.
+    8. Restart PyCharm
 
 Additional installation
 =========================
