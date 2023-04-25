@@ -34,6 +34,15 @@ Open your project
 ________________________
 Just click on the 'Open app' Button at the top right of the screen.
 
+
+Monitoring
+==============================
+At Heroku, there are several options for monitoring applications.
+The Heroku Dashboard allows real-time monitoring of application status, displaying error messages and warnings to quickly respond to issues.
+Additionally, Heroku provides the ability to monitor various metrics such as CPU usage, memory consumption, and network activity.
+Monitoring add-ons such as :ref:`papertrail` can be used to provide detailed performance data of applications.
+This helps identify potential bottlenecks and problems early on to ensure smooth application operation.
+
 Resources
 ======================
 
@@ -75,15 +84,30 @@ You can download a backup of your database directly from the Heroku Dashboard.
 
 Reset the Database
 ____________________________
+If you need to reset your Heroku Postgres database, you can do so easily through the Heroku Dashboard.
+Resetting the database will permanently erase all data stored within it.
+
+To reset your Heroku Postgres database, follow these steps:
+
+    1. Go to the "Resources" tab in your app dashboard.
+    2. Select the Heroku Postgres database.
+    3. Click on the "Settings" tab.
+    4. Scroll down to the "Danger Zone" section and click on the "Reset Database" button.
+    5. Confirm that you want to reset the database by typing the name of your Heroku app in the confirmation field.
+    6. Click on the "Reset" button.
+
+After you reset your Heroku Postgres database, it will be empty and ready for you to start adding data again.
+
+.. _papertrail:
 
 Papertrail
-==========================
+=============================
 Papertrail is a great tool that you can use to manage logs for your applications.
 With Papertrail's centralized log management, you can easily find and fix issues without having to search through multiple log sources.
 Using Papertrail, you can quickly and conveniently view all of your Heroku logs in one place.
 
 Sentry
-==========================
+===========================
 By integrating Sentry with Heroku, you can receive notifications about any errors or performance issues that occur within your Heroku-hosted applications.
 This way, you can resolve any issues before they affect your users, ensuring that your applications run smoothly and efficiently.
 

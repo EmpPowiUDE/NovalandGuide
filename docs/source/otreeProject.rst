@@ -90,7 +90,6 @@ ___________________
 Pages in oTree are the building blocks of an experiment and represent a single web page presented to the participant.
 They can include different types of content and define the structure of the experiment.
 Pages can also be customized with various settings, such as the timer length and display of a progress bar.
-Pages can be part of a Subsession, which represents a group of players in a single round of the game, but they are not necessarily always associated with Subsessions.
 
 .. image:: docs/source/_static/Overview_1.png
   :width: 400

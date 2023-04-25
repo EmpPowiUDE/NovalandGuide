@@ -50,5 +50,7 @@ Optional Time schedule
 _______________________
 
 Phase 1 - 3: 7:00 pm - 7:30 pm
+
 Phase 4: 7:30 pm - 7:40 pm
+
 Phase 5: 7:40 pm - 8:00 pm

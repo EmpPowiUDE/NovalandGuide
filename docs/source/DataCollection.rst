@@ -103,16 +103,7 @@ via E-Mail or any other way of contact with the participant labels shown under "
 
 During the data collection
 =======================
-
 During the session, you can view various features that allow you to observe the activities of participants.
-These are displayed at the top of the session, and below are listed some of the key functions:
-
-Monitor
-_________________
-[@Raphael: Bitte hier korrigieren: Im Monitor Panel in oTree sieht man nichts von Dyno-Load etc.. Bitte einen Absatz
-zu Monitoring bei Heroku zu Last etc. und einen zum Monitoring auf der Novaland-Seite vom Fortschritt der participants erstellen.]
-The 'Monitor' window displays real-time metrics such as the number of dynos running, the amount of CPU and memory being used, and the number of requests being processed.
-It also provides alerts if there are any issues or errors with your application.
 
 Data
 ___________________
@@ -121,6 +112,8 @@ This includes logs, metrics, and events, which can be used to analyze and optimi
 You can also use this data to troubleshoot any issues that may arise.
 The 'Player' model's variables are also displayed here.
 This is useful for verifying that all variables are being stored correctly.
+
+
 
 Close Session
 ===================
