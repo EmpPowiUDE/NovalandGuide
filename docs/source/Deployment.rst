@@ -14,3 +14,4 @@ Contents
     Heroku
     IndividualSettingsForTheSession
     DataCollection
+    Chats
