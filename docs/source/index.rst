@@ -29,3 +29,4 @@ Contents
    Pages
    WorkingWithData
    Deployment
+   Bots
