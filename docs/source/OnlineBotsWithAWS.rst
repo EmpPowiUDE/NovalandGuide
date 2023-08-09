@@ -245,8 +245,8 @@ Simply add this line:
 
 Run Browser Bots on AWS
 ===============================
-Nun sind alle Installationen abgeschlossen.
-Jetzt kommen die letzten Vorbereitungen bevor wir die Browser Bots starten können.
+Now all installations are complete.
+The final preparations are now underway before we can start the browser bots.
 
 Heroku
 _____________________
