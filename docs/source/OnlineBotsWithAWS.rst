@@ -237,11 +237,17 @@ Once there, enter the following to edit the file:
 
 
 A window will open where you can edit the settings.py file.
-Simply add this line:
+Add this line:
 
 .. code-block:: console
 
     BROWSER_COMMAND = 'google-chrome'
+
+Install 'xvfb' that you can run Google Chrome in the headless mode.
+
+.. code-block:: console
+
+    sudo yum install xorg-x11-server-Xvfb
 
 Run Browser Bots on AWS
 ===============================
@@ -258,6 +264,20 @@ ______________________
 If you are still logged in as the root user, as we did at the beginning of this tutorial to install packages, you need to revert this now.
 You can do so by restarting the terminal.
 From now on, you will be a regular user again, allowing you to successfully execute the following commands.
+
+We need to check beforehand whether the browser bots are enabled in the settings.py of Novaland.
+
+To do this, we navigate to our project folder using 'cd', which contains the settings.py file, and enter this command:
+
+.. code-block:: console
+
+    nano settings.py
+
+Search there for 'use_browser_bots', and if it's set to 'False', we change this value to 'True'.
+
+.. code-block:: console
+
+    use_browser_bots = True
 
 Navigate to the folder containing the settings.py file.
 In our project, this can be done using:
