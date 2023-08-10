@@ -68,18 +68,7 @@ Without it, you'll lose access to your key pair.
 
 Security Group Rule:
 
-In the network settings, let's start by configuring access from all IP addresses to the AWS server, enabling remote work from anywhere.
-If you wish to restrict access to specific IP addresses only, you can define those there.
-
-However, to gain access to the server from all IPs, a security group rule must be added, located at the bottom of the settings.
-
-.. image:: docs/source/_static/Doku55.png
-  :width: 800
-
-
-Modify the port range to any desired range and set the source type to "Anywhere."
-For the storage configuration, you can stick with the default values.
-Now, establish a connection to the instance.
+Leave all values at default.
 
 Connecting to instance
 _______________________________
