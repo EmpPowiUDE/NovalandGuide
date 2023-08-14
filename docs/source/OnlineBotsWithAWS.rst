@@ -248,6 +248,8 @@ _____________________
 Um die Browser Bots bei Heroku laufen lassen zu können, muss dort ein Secret Key auf dem Server eingebaut werden.
 Mehr Infos dazu findest dazu hier: :ref:`otree-rest-key`
 
+
+.. _starting-browser-bots:
 Starting Browser Bots
 ______________________
 If you are still logged in as the root user, as we did at the beginning of this tutorial to install packages, you need to revert this now.
@@ -298,7 +300,19 @@ For example:
 
     pip install requests
     pip install ws4py
+    pip install email_validator
+    pip install otree
 
 Run the browser bot command again.
 Now, this command will be executed.
 You can open your app on Heroku and under 'Sessions', you will see a new session has been started, with the bots currently in progress.
+
+Possible Errors
+_________________________________
+If the connection isn't working, you can try these steps:
+
+Check if packages are missing:
+Simply execute the steps of the chapter: :ref:`starting-browser-bots` mentioned above as an administrator.
+
+Now, all packages that are not yet installed will be displayed.
+Install them using 'pip,' refresh the page, and repeat the section :ref:`starting-browser-bots`.
